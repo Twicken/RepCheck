@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A612CDE220E416FD00616076 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A612CDE120E416FD00616076 /* Splash.storyboard */; };
 		A6A7F57120D0F109004D7234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F57020D0F109004D7234 /* AppDelegate.swift */; };
 		A6A7F57320D0F109004D7234 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F57220D0F109004D7234 /* ViewController.swift */; };
 		A6A7F57620D0F109004D7234 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A7F57420D0F109004D7234 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A612CDE120E416FD00616076 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		A6A7F56D20D0F109004D7234 /* RepCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A7F57020D0F109004D7234 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6A7F57220D0F109004D7234 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A612CDE020E39E8E00616076 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A6A7F56420D0F109004D7234 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +106,11 @@
 		A6A7F56F20D0F109004D7234 /* RepCheck */ = {
 			isa = PBXGroup;
 			children = (
-				BE5D72A020E3853800D1A372 /* Model */,
+				A612CDE020E39E8E00616076 /* Model */,
 				BE5D729F20E3852E00D1A372 /* View */,
 				BE5D729E20E3851800D1A372 /* Controller */,
 				A6A7F57020D0F109004D7234 /* AppDelegate.swift */,
 				A6A7F57720D0F10B004D7234 /* Assets.xcassets */,
-				A6A7F57920D0F10B004D7234 /* LaunchScreen.storyboard */,
 				A6A7F57C20D0F10B004D7234 /* Info.plist */,
 			);
 			path = RepCheck;
@@ -138,18 +146,12 @@
 		BE5D729F20E3852E00D1A372 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6A7F57920D0F10B004D7234 /* LaunchScreen.storyboard */,
 				A6A7F57420D0F109004D7234 /* Main.storyboard */,
+				A612CDE120E416FD00616076 /* Splash.storyboard */,
 			);
 			name = View;
 			path = "New Group4";
-			sourceTree = "<group>";
-		};
-		BE5D72A020E3853800D1A372 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = "New Group5";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +261,7 @@
 				A6A7F57B20D0F10B004D7234 /* LaunchScreen.storyboard in Resources */,
 				A6A7F57820D0F10B004D7234 /* Assets.xcassets in Resources */,
 				A6A7F57620D0F109004D7234 /* Main.storyboard in Resources */,
+				A612CDE220E416FD00616076 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
