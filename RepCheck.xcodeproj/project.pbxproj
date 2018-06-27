@@ -97,9 +97,10 @@
 		A6A7F56F20D0F109004D7234 /* RepCheck */ = {
 			isa = PBXGroup;
 			children = (
+				BE5D72A020E3853800D1A372 /* Model */,
+				BE5D729F20E3852E00D1A372 /* View */,
+				BE5D729E20E3851800D1A372 /* Controller */,
 				A6A7F57020D0F109004D7234 /* AppDelegate.swift */,
-				A6A7F57220D0F109004D7234 /* ViewController.swift */,
-				A6A7F57420D0F109004D7234 /* Main.storyboard */,
 				A6A7F57720D0F10B004D7234 /* Assets.xcassets */,
 				A6A7F57920D0F10B004D7234 /* LaunchScreen.storyboard */,
 				A6A7F57C20D0F10B004D7234 /* Info.plist */,
@@ -123,6 +124,32 @@
 				A6A7F59220D0F10B004D7234 /* Info.plist */,
 			);
 			path = RepCheckUITests;
+			sourceTree = "<group>";
+		};
+		BE5D729E20E3851800D1A372 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A6A7F57220D0F109004D7234 /* ViewController.swift */,
+			);
+			name = Controller;
+			path = "New Group3";
+			sourceTree = "<group>";
+		};
+		BE5D729F20E3852E00D1A372 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6A7F57420D0F109004D7234 /* Main.storyboard */,
+			);
+			name = View;
+			path = "New Group4";
+			sourceTree = "<group>";
+		};
+		BE5D72A020E3853800D1A372 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = "New Group5";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,7 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YP7993TAX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RepCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,7 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YP7993TAX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RepCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
