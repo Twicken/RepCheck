@@ -43,8 +43,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newsearch" highlightedImage="download" translatesAutoresizingMaskIntoConstraints="NO" id="1zm-rB-XRS">
-                                <rect key="frame" x="34" y="166" width="294" height="401"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newsearch" highlightedImage="newsearch" translatesAutoresizingMaskIntoConstraints="NO" id="1zm-rB-XRS">
+                                <rect key="frame" x="34" y="165" width="294" height="401"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -79,22 +79,83 @@
         <!--Options-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RepCheck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OptionsViewController" customModule="RepCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fe4-ux-HAA">
+                                <rect key="frame" x="0.0" y="49" width="375" height="569"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P80-4j-Kbt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="569"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="vb9-uc-VLF">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vb9-uc-VLF" id="2ia-ZT-mRv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="EoH-fb-aol"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="nsa-S9-3bN"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="gWh-j9-YVu"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CkU-wo-Cdo">
+                                <rect key="frame" x="157" y="20" width="60" height="20.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-mo-s8W">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNt-pj-A43">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gPc-mo-s8W" firstAttribute="centerX" secondItem="CkU-wo-Cdo" secondAttribute="centerX" id="qR0-Ak-dwx"/>
+                                    <constraint firstItem="gPc-mo-s8W" firstAttribute="centerY" secondItem="CkU-wo-Cdo" secondAttribute="centerY" id="sFX-Rq-3v5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fe4-ux-HAA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Tc-yd-M8G"/>
+                            <constraint firstItem="CkU-wo-Cdo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8cR-Uu-mDd"/>
+                            <constraint firstItem="fe4-ux-HAA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A05-oN-PuF"/>
+                            <constraint firstItem="fe4-ux-HAA" firstAttribute="top" secondItem="CkU-wo-Cdo" secondAttribute="bottom" constant="8" symbolic="YES" id="Ii7-at-T96"/>
+                            <constraint firstItem="fe4-ux-HAA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NyG-YK-gH5"/>
+                            <constraint firstItem="CkU-wo-Cdo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UpG-KG-dnz"/>
+                            <constraint firstItem="fe4-ux-HAA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iCP-3i-zbO"/>
+                            <constraint firstItem="CkU-wo-Cdo" firstAttribute="centerX" secondItem="fe4-ux-HAA" secondAttribute="centerX" id="nmV-AF-rK4"/>
+                            <constraint firstItem="fe4-ux-HAA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rXl-KN-yX5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Options" image="options" landscapeImage="options" largeContentSizeImage="options" selectedImage="options" id="PHi-95-Ft3"/>
+                    <connections>
+                        <outlet property="tableView" destination="P80-4j-Kbt" id="fxb-JS-aq6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="108"/>
+            <point key="canvasLocation" x="1272.8" y="107.49625187406298"/>
         </scene>
     </scenes>
     <resources>
-        <image name="download" width="259" height="194"/>
         <image name="history" width="25" height="25"/>
         <image name="newsearch" width="25" height="25"/>
         <image name="options" width="25" height="25"/>
