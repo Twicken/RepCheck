@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A60E47FA20EDEC8E0072F28E /* Step3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E47F920EDEC8E0072F28E /* Step3ViewController.swift */; };
 		A612CDE220E416FD00616076 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A612CDE120E416FD00616076 /* Splash.storyboard */; };
 		A6A7F57120D0F109004D7234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F57020D0F109004D7234 /* AppDelegate.swift */; };
 		A6A7F57320D0F109004D7234 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F57220D0F109004D7234 /* OptionsViewController.swift */; };
@@ -17,7 +18,8 @@
 		A6A7F59120D0F10B004D7234 /* RepCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F59020D0F10B004D7234 /* RepCheckUITests.swift */; };
 		A6DA056320E79EDA00186D94 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056220E79EDA00186D94 /* Options.swift */; };
 		A6DA056520E7B88500186D94 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056420E7B88500186D94 /* Model.swift */; };
-		A6DA056720E7BAD500186D94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056620E7BAD500186D94 /* ViewController.swift */; };
+		A6DA056720E7BAD500186D94 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056620E7BAD500186D94 /* Step1ViewController.swift */; };
+		A6DA056920EDC7F400186D94 /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056820EDC7F400186D94 /* Step2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A60E47F920EDEC8E0072F28E /* Step3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3ViewController.swift; sourceTree = "<group>"; };
 		A612CDE120E416FD00616076 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		A6A7F56D20D0F109004D7234 /* RepCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A7F57020D0F109004D7234 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +57,8 @@
 		A6A7F59220D0F10B004D7234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6DA056220E79EDA00186D94 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		A6DA056420E7B88500186D94 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		A6DA056620E7BAD500186D94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A6DA056620E7BAD500186D94 /* Step1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
+		A6DA056820EDC7F400186D94 /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				A6A7F57220D0F109004D7234 /* OptionsViewController.swift */,
-				A6DA056620E7BAD500186D94 /* ViewController.swift */,
+				A6DA056620E7BAD500186D94 /* Step1ViewController.swift */,
+				A6DA056820EDC7F400186D94 /* Step2ViewController.swift */,
+				A60E47F920EDEC8E0072F28E /* Step3ViewController.swift */,
 			);
 			name = Controller;
 			path = "New Group3";
@@ -295,7 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6DA056720E7BAD500186D94 /* ViewController.swift in Sources */,
+				A6DA056720E7BAD500186D94 /* Step1ViewController.swift in Sources */,
+				A6DA056920EDC7F400186D94 /* Step2ViewController.swift in Sources */,
+				A60E47FA20EDEC8E0072F28E /* Step3ViewController.swift in Sources */,
 				A6A7F57320D0F109004D7234 /* OptionsViewController.swift in Sources */,
 				A6A7F57120D0F109004D7234 /* AppDelegate.swift in Sources */,
 				A6DA056320E79EDA00186D94 /* Options.swift in Sources */,
