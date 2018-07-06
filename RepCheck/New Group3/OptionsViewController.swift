@@ -14,7 +14,7 @@ class OptionsViewController: UIViewController, UITableViewDataSource, UITableVie
     //This outlet connects the controller to the view so we can modify it. changes mase to this variable change the view!
     @IBOutlet weak var tableView: UITableView!
     //Get the model.
-    var model = Model()
+    var model = Model.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,12 +10,13 @@ import Foundation
 
 //holds all out model data once instansiated
 class Model{
+    static let sharedInstance = Model()
     //holds our options portion of model data
     let options : Options
     //add other model data here
     
     //initialise the model
-    init(){
+    private init(){
         ///instansiate the options
         self.options = Options()
     }

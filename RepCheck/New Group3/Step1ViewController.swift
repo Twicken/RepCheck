@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Step1ViewController.swift
 //  RepCheck
 //
 //  Created by Joel Wall on 30/6/18.
