@@ -10,10 +10,26 @@ import Foundation
 
 //options and option functionality for the options view!
 class SearchFields{
+    
+    
     //to store the current search's state
     var searchFieldsStep1 = ["firstName": "", "middleName": "", "surname": "", "country": ""]
     var searchFieldsStep2 = ["town": "", "work": "", "school": "", "optional": ""]
     var switches = ["facebook": true, "linkedIn": true, "twitter": true, "instagram": true, "youtube": true]
+    
+    //get list of countries
+    var countries: [String] = {
+        
+        var arrayOfCountries: [String] = []
+        //add a blank country for top of the array, in case the user does not want to specify
+        arrayOfCountries.append("")
+        for code in NSLocale.isoCountryCodes as [String] {
+            let id = NSLocale.localeIdentifier(fromComponents: [NSLocale.Key.countryCode.rawValue: code])
+            let name = NSLocale(localeIdentifier: "en_UK").displayName(forKey: NSLocale.Key.identifier, value: id)
+            arrayOfCountries.append(name!)
+        }
+        return arrayOfCountries
+    }()
     
     init(){
         //initiate
