@@ -13,11 +13,14 @@ class Model{
     static let sharedInstance = Model()
     //holds our options portion of model data
     let options : Options
-    //add other model data here
+    //deals with our search boxes
+    var searchFields :SearchFields
     
     //initialise the model
     private init(){
         ///instansiate the options
         self.options = Options()
+        //instansiate the search box storagae.
+        self.searchFields = SearchFields()
     }
 }

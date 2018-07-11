@@ -8,18 +8,46 @@
 
 import UIKit
 
-class Step3ViewController: UIViewController {
-    //var pastViewController: UIViewController?
-    //Outlet for talking to our view
+class Step3ViewController: UIViewController{
+
+    //Get the model.
+    var model = Model.sharedInstance
+    @IBOutlet weak var facebookSwitch: UISwitch!
+    @IBOutlet weak var linkedInSwitch: UISwitch!
+    @IBOutlet weak var twitterSwitch: UISwitch!
+    @IBOutlet weak var instagramSwitch: UISwitch!
+    @IBOutlet weak var youtubeSwitch: UISwitch!
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
+    
     //If button is back button is pressed, go back to previous view controller
-    //This has to be done programatically, as we have a custom back button.
     @IBAction func triggered(_ sender: Any) {
+        saveSwitches()
         self.navigationController?.popViewController(animated: true)
     }
-    // Do any additional setup after loading the view.
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    @IBAction func triggeredSubmit(_ sender: Any) {
+        saveSwitches()
+     }
+
+    @IBAction func triggeredReset(_ sender: Any) {
+        //reset then update view
+        model.searchFields.resetSwitches()
+        facebookSwitch.isOn = true
+        linkedInSwitch.isOn = true
+        twitterSwitch.isOn = true
+        instagramSwitch.isOn = true
+        youtubeSwitch.isOn = true
+    }
+    
+    private func saveSwitches(){
+        //save switch state
+        model.searchFields.switches["facebook"] = facebookSwitch.isOn
+        model.searchFields.switches["linkedIn"] = linkedInSwitch.isOn
+        model.searchFields.switches["twitter"] = twitterSwitch.isOn
+        model.searchFields.switches["instagram"] = instagramSwitch.isOn
+        model.searchFields.switches["youtube"] = youtubeSwitch.isOn
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,15 +55,14 @@ class Step3ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func viewDidLoad() {
+        //load switch states
+        facebookSwitch.isOn = model.searchFields.switches["facebook"]!
+        linkedInSwitch.isOn =  model.searchFields.switches["linkedIn"]!
+        twitterSwitch.isOn = model.searchFields.switches["twitter"]!
+        instagramSwitch.isOn = model.searchFields.switches["instagram"]!
+        youtubeSwitch.isOn = model.searchFields.switches["youtube"]!
+    }
+
     
 }

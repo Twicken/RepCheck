@@ -46,7 +46,7 @@ class OptionsViewController: UIViewController, UITableViewDataSource, UITableVie
         // Must set you prototype cell be display the subtitle
         // in storyboard
         cell.textLabel?.text = model.options.optionsList[indexPath.item]
-        cell.detailTextLabel?.text = "Insert your subtitle here"
+        cell.detailTextLabel?.text = "An Option"
         
         
         

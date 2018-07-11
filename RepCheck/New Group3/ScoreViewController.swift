@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ScoreViewController: UIViewController {
-    //var pastViewController: UIViewController?
+class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
+
+    //Get the model.
+    var model = Model.sharedInstance
+    @IBOutlet weak var newSearchButton: UIButton!
     //Outlet for talking to our view
     @IBOutlet weak var backButton: UIButton!
     //If button is back button is pressed, go back to previous view controller
@@ -17,25 +20,44 @@ class ScoreViewController: UIViewController {
     @IBAction func triggered(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func NewSearchTriggered(_ sender: Any) {
+        //Get the model.
+        model.searchFields.resetStep2()
+        model.searchFields.resetStep1()
+        model.searchFields.resetSwitches()
+
+        
+    }
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
+        //new alert for saving of search
+        let alertController = UIAlertController(title: "RepCheck", message: "Would you like to save this search?", preferredStyle: .alert)
+        
+        // Create an action to be added to the alert with a title,
+        let favouriteButton = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
+            print("Search saved to History")
+        })
+        
+        let  deleteButton = UIAlertAction(title: "No", style: .destructive, handler: { (action) -> Void in
+            print("Search not Saved")
+        })
+        
+        alertController.addAction(favouriteButton)
+        alertController.addAction(deleteButton)
+        
+        self.navigationController!.present(alertController, animated: true, completion: nil)
+        
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //if needed in future
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
