@@ -53,6 +53,24 @@ class OptionsViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
      }
     
+    //for detecting clicks
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //do options
+        model.options.doOption(optionNum: indexPath.row)
+        //if option 1 was selected, show about box
+        if indexPath.row == 1{
+            //new alert for showing about
+            let alertController = UIAlertController(title: "RepCheck version 0.1 Alpha", message: "By Joel Wall & Joseph Galati", preferredStyle: .alert)
+    
+            let  OKButton = UIAlertAction(title: "OK", style: .destructive, handler: { (action) -> Void in
+            })
+            
+            alertController.addAction(OKButton)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     
     /*
      // Override to support conditional editing of the table view.

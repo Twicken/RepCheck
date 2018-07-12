@@ -21,6 +21,9 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func NewSearchTriggered(_ sender: Any) {
+        //have the history table know its no longer editing.
+        model.history.currentlyModifyingSearch = -1
+        //reset all things to new
         model.searchFields.resetStep2()
         model.searchFields.resetStep1()
         model.searchFields.resetSwitches()
@@ -29,16 +32,24 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
     }
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
+        var message = "Would you like to save this search to history?"
+        if model.history.currentlyModifyingSearch >= 0 {
+            message = "Would you like to update this search in history?"
+        }
         //new alert for saving of search
-        let alertController = UIAlertController(title: "RepCheck", message: "Would you like to save this search?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "RepCheck", message: message, preferredStyle: .alert)
         
         // Create an action to be added to the alert with a title,
         let yesButton = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
             print("Search saved to History")
             self.model.history.addSearch()
+            //modifying mode over
+            self.model.history.currentlyModifyingSearch = -1
         })
         
         let  noButton = UIAlertAction(title: "No", style: .destructive, handler: { (action) -> Void in
+            //modifying mode over
+            self.model.history.currentlyModifyingSearch = -1
             print("Search not Saved")
         })
         

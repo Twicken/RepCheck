@@ -59,6 +59,12 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
+    //for detecting clicks and loading up history for a re-search/modification
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        model.searchFields = model.history.historyList[indexPath.row]
+        //lets the history class know what entry to overwrite
+        model.history.currentlyModifyingSearch = indexPath.row
+    }
     
     /*
      // Override to support conditional editing of the table view.

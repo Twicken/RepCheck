@@ -18,6 +18,14 @@ struct Options {
     
     init(){
         self.optionsList.append("Clear History")
-        self.optionsList.append("About Repcheck")
+        self.optionsList.append("About RepCheck")
+    }
+    
+    func doOption(optionNum: Int){
+        //clear history
+        if optionNum == 0{
+            Model.sharedInstance.history.historyList.removeAll()
+        }
+        
     }
 }
