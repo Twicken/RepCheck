@@ -9,7 +9,7 @@
 import Foundation
 
 //options and option functionality for the options view!
-class SearchFields{
+struct SearchFields{
     
     
     //to store the current search's state
@@ -36,19 +36,19 @@ class SearchFields{
     }
     
     //clears all the search text boxes and resets switches
-    func resetStep1(){
+    mutating func resetStep1(){
         for tuple in searchFieldsStep1 {
             searchFieldsStep1[tuple.key] = ""
         }
     }
     
-    func resetStep2(){
+    mutating func resetStep2(){
         for tuple in searchFieldsStep2 {
             searchFieldsStep2[tuple.key] = ""
         }
     }
     
-    func resetSwitches(){
+    mutating func resetSwitches(){
         for tuple in switches {
             switches[tuple.key] = true
         }

@@ -22,6 +22,12 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+        super.viewDidAppear(true)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,23 +36,23 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     // The number of segments in the table view.
     func numberOfSections(in tableView: UITableView) -> Int {
         //We just need one segmenet since we don't have many options.
-        return model.options.sections
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Return the number of cells in the tableview
-        return model.options.optionsList.count
+        return model.history.historyList.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath)
         
         // Access the default properties of the prototype cell
         // Must set you prototype cell be display the subtitle
         // in storyboard
-        cell.textLabel?.text = model.options.optionsList[indexPath.item]
-        cell.detailTextLabel?.text = "An Option"
+        cell.textLabel?.text = model.history.historyList[indexPath.item].searchFieldsStep1["firstName"]! + " " + model.history.historyList[indexPath.item].searchFieldsStep1["surname"]!
+        cell.detailTextLabel?.text = "History"
         
         
         

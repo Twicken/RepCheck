@@ -18,14 +18,46 @@
                     <view key="view" contentMode="scaleToFill" id="3xR-cV-cc9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-oB-aKN">
+                                <rect key="frame" x="20" y="66" width="363" height="621"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HistoryCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" id="Ovp-TF-93i">
+                                        <rect key="frame" x="0.0" y="28" width="363" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ovp-TF-93i" id="33P-XD-MQa">
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="HistoryCell"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RoG-Zv-Wlo" id="hsY-i1-Edj"/>
+                                    <outlet property="delegate" destination="RoG-Zv-Wlo" id="ISg-TL-jbx"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5o-iA-Bk9">
+                                <rect key="frame" x="186" y="37" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ASG-8X-zQY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" image="history" landscapeImage="history" largeContentSizeImage="history" selectedImage="history" id="ZUO-ao-ODQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="Kf5-oB-aKN" id="gWz-BC-P1f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7B-es-ePT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1114" y="-924"/>
+            <point key="canvasLocation" x="-1114.4927536231885" y="-924.45652173913049"/>
         </scene>
         <!--New Search-->
         <scene sceneID="ymT-9Z-J3N">
@@ -882,7 +914,6 @@
         <image name="options" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wSz-Cm-I7Q"/>
         <segue reference="2SO-Ah-SUw"/>
     </inferredMetricsTieBreakers>
 </document>

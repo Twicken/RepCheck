@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class HistoryList{
+    //stores a list of searches. later to be done with database.
+    var historyList = [SearchFields]()
+    
+    init(){}
+    
+    func addSearch(){
+        self.historyList.append(Model.sharedInstance.searchFields)
+    }
+}

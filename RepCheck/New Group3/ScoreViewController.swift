@@ -21,7 +21,6 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func NewSearchTriggered(_ sender: Any) {
-        //Get the model.
         model.searchFields.resetStep2()
         model.searchFields.resetStep1()
         model.searchFields.resetSwitches()
@@ -34,16 +33,17 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
         let alertController = UIAlertController(title: "RepCheck", message: "Would you like to save this search?", preferredStyle: .alert)
         
         // Create an action to be added to the alert with a title,
-        let favouriteButton = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
+        let yesButton = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
             print("Search saved to History")
+            self.model.history.addSearch()
         })
         
-        let  deleteButton = UIAlertAction(title: "No", style: .destructive, handler: { (action) -> Void in
+        let  noButton = UIAlertAction(title: "No", style: .destructive, handler: { (action) -> Void in
             print("Search not Saved")
         })
         
-        alertController.addAction(favouriteButton)
-        alertController.addAction(deleteButton)
+        alertController.addAction(yesButton)
+        alertController.addAction(noButton)
         
         self.navigationController!.present(alertController, animated: true, completion: nil)
         

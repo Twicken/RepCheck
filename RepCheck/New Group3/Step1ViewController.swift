@@ -24,8 +24,8 @@ class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func nextButtonPressed(_ sender: Any) {
         //save inputted text so we can use it later or restore the text boxes.
         model.searchFields.searchFieldsStep1["firstName"] = firstNameBox.text
-        model.searchFields.searchFieldsStep1["middleName"] = firstNameBox.text
-        model.searchFields.searchFieldsStep1["surname"] = firstNameBox.text
+        model.searchFields.searchFieldsStep1["middleName"] = middleNameBox.text
+        model.searchFields.searchFieldsStep1["surname"] = surnameBox.text
         model.searchFields.searchFieldsStep1["country"] = model.searchFields.countries[country.selectedRow(inComponent: 0)]
         print(model.searchFields.searchFieldsStep1["country"]!)
     }

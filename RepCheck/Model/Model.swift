@@ -15,6 +15,8 @@ class Model{
     let options : Options
     //deals with our search boxes
     var searchFields :SearchFields
+    //our search history (to be replaced by database)
+    var history : HistoryList
     
     //initialise the model
     private init(){
@@ -22,5 +24,7 @@ class Model{
         self.options = Options()
         //instansiate the search box storagae.
         self.searchFields = SearchFields()
+        //do the same for history
+        self.history = HistoryList()
     }
 }
