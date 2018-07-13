@@ -301,16 +301,19 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0g-2E-A87">
                                 <rect key="frame" x="16" y="193" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="townbox"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHV-cR-6jm">
                                 <rect key="frame" x="16" y="258.5" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="workbox"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1s-Oc-wgU">
                                 <rect key="frame" x="16" y="324" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="schoolbox"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -422,6 +425,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cxl-2n-6d4">
                                 <rect key="frame" x="16" y="390.5" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="otherbox"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

@@ -16,7 +16,7 @@ class RepCheckUITests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+        continueAfterFailure = true
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
 
@@ -28,14 +28,14 @@ class RepCheckUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testElementsScene1() {
+    func testElementsScenes() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         // Get a reference to the app
         let app = XCUIApplication()
         
-        
+        // Step 1 Testing
         // use the identifier of the textboxes for to establish testing
         let firstnamebox=app.textFields["firstnamebox"]
         let middlenamebox=app.textFields["middlenamebox"]
@@ -74,8 +74,15 @@ class RepCheckUITests: XCTestCase {
         XCTAssertEqual(middlenamebox.value as! String, "Jones")
         XCTAssertEqual(surnamebox.value as! String, "Miller")
 
-        // Test of the picker wheel
+        // Test of the picker wheel - Pre test and Action Test
+        
+        let pickerWheel = app.pickers["countrypicker"].children(matching: .pickerWheel).element
+        XCTAssertEqual(pickerWheel.value as! String, "")
+        
+        // Add test data to the picker
         app.pickerWheels.element.adjust(toPickerWheelValue: "Australia")
+        XCTAssertEqual(pickerWheel.value as! String, "Australia")
+        
         
         // Test that there are 7 Static texts on the screen
         XCTAssertEqual(app.staticTexts.count, 7)
@@ -89,19 +96,83 @@ class RepCheckUITests: XCTestCase {
         // Test the Reset button
         app.buttons["Reset"].tap()
         
-        // Expecting no values stored in the text boxes
+        // Post Reset Button Test - Expecting no values stored in the text boxes
         XCTAssertEqual(firstnamebox.value as! String, "")
         XCTAssertEqual(middlenamebox.value as! String, "")
         XCTAssertEqual(surnamebox.value as! String, "")
-        
+
+        // Post Reset Button - Expecting No Value in the picker wheel
+        XCTAssertEqual(pickerWheel.value as! String, "")
+
         // Test the Next button
         app.buttons["Next →"].tap()
         
+        // Step 2 Scene Testing
         
+        // use the identifier of the textboxes for to establish testing
+        let townbox=app.textFields["townbox"]
+        let workbox=app.textFields["workbox"]
+        let schoolbox=app.textFields["schoolbox"]
+        let otherbox=app.textFields["otherbox"]
         
+        // Pre Conditions of the text boxes Scene 2
+        // Expecting no value inititally before input
+        XCTAssertEqual(townbox.value as! String, "")
+        XCTAssertEqual(workbox.value as! String, "")
+        XCTAssertEqual(schoolbox.value as! String, "")
+        XCTAssertEqual(otherbox.value as! String, "")
         
+        // Action Tests
+        // Test that the first text box (Town) is found and accepts user inputs
+        townbox.tap()
         
+        // Input of text
+        townbox.typeText("Sydney")
         
+        // Test that the second text box (Work) is found and accepts user inputs
+        workbox.tap()
+        
+        // Input of text
+        workbox.typeText("Big Company")
+        
+        // Test that the third text box (School) is found and accepts user inputs
+        schoolbox.tap()
+        
+        schoolbox.typeText("RMIT")
+        
+        // Test that the fourth text box (Other) is found and accepts user inputs
+        otherbox.tap()
+        
+        otherbox.typeText("kelso")
+        
+        // Navigation button testing between scenes
+        app.buttons["← Back"].tap()
+        app.buttons["Next →"].tap()
+        
+        // Post Conditions of the text boxes Scene 2
+        // Expecting no value inititally before input
+        XCTAssertEqual(townbox.value as! String, "Sydney")
+        XCTAssertEqual(workbox.value as! String, "Big Company")
+        XCTAssertEqual(schoolbox.value as! String, "RMIT")
+        XCTAssertEqual(otherbox.value as! String, "kelso")
+        
+        // Navigation button testing between scenes
+        
+        app.buttons["Reset"].tap()
+        
+        // Test correct Static texts quantity on the screen
+        XCTAssertEqual(app.staticTexts.count, 7)
+        
+        // Test correct buttons quantity on the screen
+        XCTAssertEqual(app.buttons.count,6)
+        
+        // Test correct images quantity on the screen
+        XCTAssertEqual(app.images.count,1)
+        
+        // Navigate to Step 3 Scene
+        app.buttons["Next →"].tap()
+        
+        // Step 4 Scene Testing
         
     }
     
