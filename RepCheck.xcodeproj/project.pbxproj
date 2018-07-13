@@ -25,6 +25,7 @@
 		A6DA056520E7B88500186D94 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056420E7B88500186D94 /* Model.swift */; };
 		A6DA056720E7BAD500186D94 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056620E7BAD500186D94 /* Step1ViewController.swift */; };
 		A6DA056920EDC7F400186D94 /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056820EDC7F400186D94 /* Step2ViewController.swift */; };
+		BECF0CD220F87910008BEEF2 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF0CD120F87910008BEEF2 /* Recording.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A6DA056420E7B88500186D94 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A6DA056620E7BAD500186D94 /* Step1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
 		A6DA056820EDC7F400186D94 /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
+		BECF0CD120F87910008BEEF2 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				A6A7F59020D0F10B004D7234 /* RepCheckUITests.swift */,
+				BECF0CD120F87910008BEEF2 /* Recording.swift */,
 				A6A7F59220D0F10B004D7234 /* Info.plist */,
 			);
 			path = RepCheckUITests;
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A7F59120D0F10B004D7234 /* RepCheckUITests.swift in Sources */,
+				BECF0CD220F87910008BEEF2 /* Recording.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
