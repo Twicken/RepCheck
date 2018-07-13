@@ -40,29 +40,44 @@ class RepCheckUITests: XCTestCase {
         let firstnamebox=app.textFields["firstnamebox"]
         let middlenamebox=app.textFields["middlenamebox"]
         let surnamebox=app.textFields["surnamebox"]
-
+        
         // Below line Used in identifying elements
         // print(app.debugDescription)
         
+        // Pre Conditions of the text boxes Scene 1
+        // Expecting no value inititally before input
+        XCTAssertEqual(firstnamebox.value as! String, "")
+        XCTAssertEqual(middlenamebox.value as! String, "")
+        XCTAssertEqual(surnamebox.value as! String, "")
+        
+        // Action Tests
         // Test that the first text box (first name) is found and accepts user inputs
         firstnamebox.tap()
+        
+        // Input of text
         firstnamebox.typeText("Bob")
         
         // Test that the second text box (middle name) is found and accepts user inputs
         middlenamebox.tap()
+        
+        // Input of text
         middlenamebox.typeText("Jones")
         
         // Test that the third text box (surname) is found and accepts user inputs
         surnamebox.tap()
+        
         surnamebox.typeText("Miller")
         
+        // Post Conditions Test
+        // Test to ensure the is what we expected
+        XCTAssertEqual(firstnamebox.value as! String, "Bob")
+        XCTAssertEqual(middlenamebox.value as! String, "Jones")
+        XCTAssertEqual(surnamebox.value as! String, "Miller")
+
         // Test of the picker wheel
-        let pickerWheel = app.pickers["countrypicker"].children(matching: .pickerWheel).element
-        pickerWheel.swipeUp()
-        pickerWheel.tap()
+        app.pickerWheels.element.adjust(toPickerWheelValue: "Australia")
         
         // Test that there are 7 Static texts on the screen
-        
         XCTAssertEqual(app.staticTexts.count, 7)
         
         // Test that there are 8 buttons on the screen
@@ -74,7 +89,12 @@ class RepCheckUITests: XCTestCase {
         // Test the Reset button
         app.buttons["Reset"].tap()
         
-                // Test the Next button
+        // Expecting no values stored in the text boxes
+        XCTAssertEqual(firstnamebox.value as! String, "")
+        XCTAssertEqual(middlenamebox.value as! String, "")
+        XCTAssertEqual(surnamebox.value as! String, "")
+        
+        // Test the Next button
         app.buttons["Next →"].tap()
         
         

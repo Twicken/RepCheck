@@ -173,7 +173,9 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="858-ZL-kvX">
                                 <rect key="frame" x="55" y="304" width="320" height="216"/>
-                                <accessibility key="accessibilityConfiguration" identifier="countrypicker"/>
+                                <accessibility key="accessibilityConfiguration" identifier="countrypicker">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="dataSource" destination="Y3U-An-vrH" id="x78-OQ-e9v"/>
                                     <outlet property="delegate" destination="Y3U-An-vrH" id="zcA-eo-LHH"/>
