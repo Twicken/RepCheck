@@ -17,6 +17,8 @@ class Model{
     var searchFields :SearchFields
     //our search history (to be replaced by database)
     var history : HistoryList
+    //for storing our search result
+    var result : Result
     
     //initialise the model
     private init(){
@@ -26,5 +28,6 @@ class Model{
         self.searchFields = SearchFields()
         //do the same for history
         self.history = HistoryList()
+        self.result = Result()
     }
 }
