@@ -726,9 +726,6 @@
                                 <state key="normal" title="See Details">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Ng9-t7-vnr" kind="show" id="YLS-aj-92b"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5A-BC-bjH">
                                 <rect key="frame" x="165" y="618" width="83" height="30"/>
@@ -780,9 +777,25 @@
             </objects>
             <point key="canvasLocation" x="1222" y="-924"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="HhQ-4d-WyZ">
+            <objects>
+                <viewController id="tWH-HM-eYU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tIH-oA-mhY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UPJ-BV-Jd5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rv3-ad-RaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="-924"/>
+        </scene>
         <!--Details-->
         <scene sceneID="wQG-5M-KC6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5a-lb-ZMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Details" id="Ng9-t7-vnr" customClass="DetailsViewController" customModule="RepCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hxa-CE-7n5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -808,9 +821,8 @@
                         <outlet property="backButton" destination="gOb-K7-THd" id="Lqf-sW-NfR"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u5a-lb-ZMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986" y="-924"/>
+            <point key="canvasLocation" x="2751" y="-924"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="S1v-6n-YaI">

@@ -27,7 +27,6 @@ class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         model.searchFields.searchFieldsStep1["middleName"] = middleNameBox.text
         model.searchFields.searchFieldsStep1["surname"] = surnameBox.text
         model.searchFields.searchFieldsStep1["country"] = model.searchFields.countries[country.selectedRow(inComponent: 0)]
-        print(model.searchFields.searchFieldsStep1["country"]!)
     }
 
     @IBAction func resetButtonPressed(_ sender: Any) {

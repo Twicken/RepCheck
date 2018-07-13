@@ -25,6 +25,7 @@ struct Options {
         //clear history
         if optionNum == 0{
             Model.sharedInstance.history.historyList.removeAll()
+            print("History Deleted")
         }
         
     }

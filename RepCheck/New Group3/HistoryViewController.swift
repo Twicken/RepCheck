@@ -64,6 +64,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         model.searchFields = model.history.historyList[indexPath.row]
         //lets the history class know what entry to overwrite
         model.history.currentlyModifyingSearch = indexPath.row
+        print("Search loaded. Now in modify mode")
     }
     
     /*
