@@ -9,17 +9,17 @@
 import XCTest
 
 class RepCheckUITests: XCTestCase {
-        
+    
     override func setUp() {
         super.setUp()
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = true
+        continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
+        
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
@@ -35,6 +35,11 @@ class RepCheckUITests: XCTestCase {
         // Get a reference to the app
         let app = XCUIApplication()
         
+        //----------------------------------------------------------------------
+        // Testing below also implements test input recording that demonstrate
+        // scene flow and test data inputs etc.
+        //----------------------------------------------------------------------
+
         // Step 1 Testing
         // use the identifier of the textboxes for to establish testing
         let firstnamebox=app.textFields["firstnamebox"]
@@ -69,11 +74,11 @@ class RepCheckUITests: XCTestCase {
         surnamebox.typeText("Miller")
         
         // Post Conditions Test
-        // Test to ensure the is what we expected
+        // Test to ensure the data is what we expected
         XCTAssertEqual(firstnamebox.value as! String, "Bob")
         XCTAssertEqual(middlenamebox.value as! String, "Jones")
         XCTAssertEqual(surnamebox.value as! String, "Miller")
-
+        
         // Test of the picker wheel - Pre test and Action Test
         
         let pickerWheel = app.pickers["countrypicker"].children(matching: .pickerWheel).element
@@ -89,7 +94,7 @@ class RepCheckUITests: XCTestCase {
         
         // Test that there are 8 buttons on the screen
         XCTAssertEqual(app.buttons.count,8)
-    
+        
         // Test that there are only 1 image on the screen
         XCTAssertEqual(app.images.count,1)
         
@@ -100,10 +105,10 @@ class RepCheckUITests: XCTestCase {
         XCTAssertEqual(firstnamebox.value as! String, "")
         XCTAssertEqual(middlenamebox.value as! String, "")
         XCTAssertEqual(surnamebox.value as! String, "")
-
+        
         // Post Reset Button - Expecting No Value in the picker wheel
         XCTAssertEqual(pickerWheel.value as! String, "")
-
+        
         // Test the Next button
         app.buttons["Next →"].tap()
         
@@ -150,14 +155,13 @@ class RepCheckUITests: XCTestCase {
         app.buttons["Next →"].tap()
         
         // Post Conditions of the text boxes Scene 2
-        // Expecting no value inititally before input
+        // Test to ensure the data is what we expected
         XCTAssertEqual(townbox.value as! String, "Sydney")
         XCTAssertEqual(workbox.value as! String, "Big Company")
         XCTAssertEqual(schoolbox.value as! String, "RMIT")
         XCTAssertEqual(otherbox.value as! String, "kelso")
         
-        // Navigation button testing between scenes
-        
+        // Reset Button Test
         app.buttons["Reset"].tap()
         
         // Test correct Static texts quantity on the screen
@@ -166,16 +170,54 @@ class RepCheckUITests: XCTestCase {
         // Test correct buttons quantity on the screen
         XCTAssertEqual(app.buttons.count,6)
         
-        // Test correct images quantity on the screen
+        // Test correct image quantity on the screen
         XCTAssertEqual(app.images.count,1)
         
         // Navigate to Step 3 Scene
         app.buttons["Next →"].tap()
         
-        // Step 4 Scene Testing
+        // Step 3 Scene Testing
         
+        // Testing that switch is on by default
+        let mySwitch = app.switches["youtubeswitch"]
+        XCTAssertEqual (mySwitch.value as! String, "1")
+        
+        // Test correct Static texts quantity on the screen
+        XCTAssertEqual(app.staticTexts.count, 8)
+        
+        // Test correct buttons quantity on the screen
+        XCTAssertEqual(app.buttons.count,6)
+        
+        // Test correct image quantity on the screen
+        XCTAssertEqual(app.images.count,6)
+        
+        // Reset Button Test
+        app.buttons["Reset"].tap()
+        
+        // Navigation button testing between scenes
+        app.buttons["← Back"].tap()
+        app.buttons["Next →"].tap()
+        app.buttons["Search Now"].tap()
+      
+        // Alert UI Test
+        app.alerts["RepCheck"].buttons["Yes"].tap()
+        
+        // Rep Score Scene Testing
+        
+        // Test correct Static texts quantity on the screen
+        XCTAssertEqual(app.staticTexts.count, 3)
+        
+        // Test correct buttons quantity on the screen
+        XCTAssertEqual(app.buttons.count,6)
+        
+        // Test correct image quantity on the screen
+        XCTAssertEqual(app.images.count,3)
+        
+        // Navigation Test
+        app.buttons["See Details"].tap()
     }
     
     
     
 }
+

@@ -78,6 +78,9 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wiF-15-0ar">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Y3U-An-vrH" kind="relationship" relationship="rootViewController" id="f7n-Ls-SJp"/>
                     </connections>
@@ -172,7 +175,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="858-ZL-kvX">
-                                <rect key="frame" x="55" y="353" width="320" height="216"/>
+                                <rect key="frame" x="55" y="304" width="320" height="216"/>
                                 <accessibility key="accessibilityConfiguration" identifier="countrypicker">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -182,7 +185,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="nextButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP5-dU-GNs">
-                                <rect key="frame" x="295" y="564" width="64" height="30"/>
+                                <rect key="frame" x="295" y="515" width="64" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="nextbutton1"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -195,7 +198,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-Nf-NBO">
-                                <rect key="frame" x="166.5" y="564" width="42" height="30"/>
+                                <rect key="frame" x="166.5" y="515" width="42" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="resetbutton1"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -294,31 +297,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online Reputation Checker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gw-IF-NbQ">
-                                <rect key="frame" x="86.5" y="12" width="204.5" height="20.5"/>
+                                <rect key="frame" x="86.5" y="56" width="204.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0g-2E-A87">
-                                <rect key="frame" x="16" y="149" width="343" height="30"/>
+                                <rect key="frame" x="16" y="193" width="343" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="townbox"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHV-cR-6jm">
-                                <rect key="frame" x="16" y="214.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="258.5" width="343" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="workbox"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1s-Oc-wgU">
-                                <rect key="frame" x="16" y="280" width="343" height="30"/>
+                                <rect key="frame" x="16" y="324" width="343" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="schoolbox"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vll-Z6-aI1">
-                                <rect key="frame" x="154" y="-24" width="67" height="41"/>
+                                <rect key="frame" x="154" y="20" width="67" height="41"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pk5-Op-c6C">
                                         <rect key="frame" x="0.0" y="0.0" width="67" height="41"/>
@@ -344,25 +347,25 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Town/City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DM-Xg-HYd">
-                                <rect key="frame" x="124" y="121.5" width="126" height="20.5"/>
+                                <rect key="frame" x="124" y="165.5" width="126" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workplace Name/ Business Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lC1-Sd-oz0">
-                                <rect key="frame" x="58" y="186" width="258" height="20.5"/>
+                                <rect key="frame" x="58" y="230" width="258" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current or Previous School/College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ip-oW-UP9">
-                                <rect key="frame" x="54.5" y="252.5" width="268.5" height="20.5"/>
+                                <rect key="frame" x="54.5" y="296.5" width="268.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ff-A6-03A">
-                                <rect key="frame" x="308" y="613" width="51" height="30"/>
+                                <rect key="frame" x="308" y="564" width="51" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Next →">
@@ -374,7 +377,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YN-2H-Jqo">
-                                <rect key="frame" x="166.5" y="613" width="42" height="30"/>
+                                <rect key="frame" x="166.5" y="564" width="42" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reset">
@@ -385,7 +388,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="backButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7U-HD-Bzu">
-                                <rect key="frame" x="0.0" y="613" width="53" height="30"/>
+                                <rect key="frame" x="0.0" y="564" width="53" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="backButton"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -397,7 +400,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxN-Ql-ugn">
-                                <rect key="frame" x="128.5" y="27" width="119.5" height="45.5"/>
+                                <rect key="frame" x="128.5" y="71" width="119.5" height="45.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Step 2/3">
                                         <attributes>
@@ -409,7 +412,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kv-m3-9cU">
-                                <rect key="frame" x="73.5" y="60.5" width="230.5" height="39"/>
+                                <rect key="frame" x="73.5" y="104.5" width="230.5" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="u2t-lc-Icx"/>
                                 </constraints>
@@ -424,13 +427,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cxl-2n-6d4">
-                                <rect key="frame" x="16" y="346.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="390.5" width="343" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="otherbox"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional (Any other relevant info)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKg-Si-g7p">
-                                <rect key="frame" x="61.5" y="318" width="253.5" height="20.5"/>
+                                <rect key="frame" x="61.5" y="362" width="253.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -550,22 +553,27 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2B-Ft-6h4">
                                 <rect key="frame" x="310" y="361" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="instagramswitch"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6NX-YN-chY">
                                 <rect key="frame" x="310" y="291" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="twitterswitch"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xhb-dz-Qxi">
                                 <rect key="frame" x="310" y="221" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="linkedinswitch"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xx1-Pa-Zd9">
                                 <rect key="frame" x="310" y="151" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="facebookswitch"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m0P-QG-Kg9">
                                 <rect key="frame" x="310" y="431" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="youtubeswitch"/>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="4WJ-CY-1o6">
                                 <rect key="frame" x="16" y="135" width="63" height="63"/>
@@ -687,7 +695,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="backButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1B-ab-zJH">
-                                <rect key="frame" x="16" y="520" width="53" height="30"/>
+                                <rect key="frame" x="16" y="564" width="53" height="30"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="← Back">
@@ -700,7 +708,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-dc-Hfs">
-                                <rect key="frame" x="60" y="31.5" width="256" height="42"/>
+                                <rect key="frame" x="60" y="75.5" width="256" height="42"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Your RepScore Is">
                                         <attributes>
@@ -711,35 +719,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="uF0-zF-hku">
-                                <rect key="frame" x="67" y="81.5" width="241" height="333.5"/>
+                                <rect key="frame" x="67" y="125.5" width="241" height="240.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online Reputation Checker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P85-QQ-xPA">
-                                <rect key="frame" x="85.5" y="11" width="205" height="20.5"/>
+                                <rect key="frame" x="85.5" y="55" width="205" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoclear 2" highlightedImage="logoclear 2" translatesAutoresizingMaskIntoConstraints="NO" id="Oc7-0h-xnu">
-                                <rect key="frame" x="153.5" y="-25.5" width="67" height="41"/>
+                                <rect key="frame" x="153.5" y="18.5" width="67" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Khg-AY-jgx"/>
                                     <constraint firstAttribute="width" constant="67" id="S3p-X2-pa3"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mX-8d-UfF">
-                                <rect key="frame" x="85.5" y="81.5" width="205" height="333.5"/>
+                                <rect key="frame" x="85.5" y="125.5" width="205" height="240.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="95"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bar" translatesAutoresizingMaskIntoConstraints="NO" id="4tX-XF-Qs1">
-                                <rect key="frame" x="66" y="432" width="241" height="31"/>
+                                <rect key="frame" x="66" y="383" width="241" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="eaS-bl-zZe"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbt-eb-f5c">
-                                <rect key="frame" x="148.5" y="522" width="77" height="30"/>
+                                <rect key="frame" x="148.5" y="473" width="77" height="30"/>
                                 <color key="backgroundColor" red="0.088610818590000001" green="0.73097474090000003" blue="0.13454511690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="See Details">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1007,6 +1015,6 @@
         <image name="options" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2SO-Ah-SUw"/>
+        <segue reference="f7n-Ls-SJp"/>
     </inferredMetricsTieBreakers>
 </document>
