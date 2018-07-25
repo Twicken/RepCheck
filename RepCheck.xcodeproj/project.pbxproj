@@ -14,6 +14,7 @@
 		A620436920EF0FF100B48504 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A620436820EF0FF100B48504 /* HistoryViewController.swift */; };
 		A63C7E5D20F5C0970083C3B0 /* SearchFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C7E5C20F5C0970083C3B0 /* SearchFields.swift */; };
 		A63C7E5F20F60F990083C3B0 /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C7E5E20F60F990083C3B0 /* HistoryList.swift */; };
+		A66A14C721085A6F00A4CA71 /* RepCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A66A14C521085A6F00A4CA71 /* RepCheck.xcdatamodeld */; };
 		A69C843B20F8EA42005C2B62 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C843A20F8EA42005C2B62 /* MasterViewController.swift */; };
 		A6A7F57120D0F109004D7234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F57020D0F109004D7234 /* AppDelegate.swift */; };
 		A6A7F57320D0F109004D7234 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F57220D0F109004D7234 /* OptionsViewController.swift */; };
@@ -55,6 +56,7 @@
 		A620436820EF0FF100B48504 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A63C7E5C20F5C0970083C3B0 /* SearchFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFields.swift; sourceTree = "<group>"; };
 		A63C7E5E20F60F990083C3B0 /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
+		A66A14C621085A6F00A4CA71 /* RepCheck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepCheck.xcdatamodel; sourceTree = "<group>"; };
 		A69C843A20F8EA42005C2B62 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		A6A7F56D20D0F109004D7234 /* RepCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A7F57020D0F109004D7234 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				A6A7F57020D0F109004D7234 /* AppDelegate.swift */,
 				A6A7F57720D0F10B004D7234 /* Assets.xcassets */,
 				A6A7F57C20D0F10B004D7234 /* Info.plist */,
+				A66A14C521085A6F00A4CA71 /* RepCheck.xcdatamodeld */,
 			);
 			path = RepCheck;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				A6DA056920EDC7F400186D94 /* Step2ViewController.swift in Sources */,
 				A620436720EF0FDC00B48504 /* DetailsViewController.swift in Sources */,
 				A620436920EF0FF100B48504 /* HistoryViewController.swift in Sources */,
+				A66A14C721085A6F00A4CA71 /* RepCheck.xcdatamodeld in Sources */,
 				A6DE68CD20F8F3A90028139F /* Result.swift in Sources */,
 				A60E47FA20EDEC8E0072F28E /* Step3ViewController.swift in Sources */,
 				A6A7F57320D0F109004D7234 /* OptionsViewController.swift in Sources */,
@@ -666,6 +670,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A66A14C521085A6F00A4CA71 /* RepCheck.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A66A14C621085A6F00A4CA71 /* RepCheck.xcdatamodel */,
+			);
+			currentVersion = A66A14C621085A6F00A4CA71 /* RepCheck.xcdatamodel */;
+			path = RepCheck.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A6A7F56520D0F109004D7234 /* Project object */;
 }
