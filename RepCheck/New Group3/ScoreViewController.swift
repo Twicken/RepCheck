@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
 
@@ -43,6 +44,7 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
         let yesButton = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
             print("Search saved to History")
             self.model.history.addSearch()
+            
             //modifying mode over
             self.model.history.currentlyModifyingSearch = -1
         })

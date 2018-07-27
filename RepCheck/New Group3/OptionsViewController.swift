@@ -55,8 +55,6 @@ class OptionsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //for detecting clicks
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //do options
-        model.options.doOption(optionNum: indexPath.row)
         //if option 1 was selected, show about box
         if indexPath.row == 1{
             //new alert for showing about
@@ -67,6 +65,22 @@ class OptionsViewController: UIViewController, UITableViewDataSource, UITableVie
             
             alertController.addAction(OKButton)
             
+            self.present(alertController, animated: true, completion: nil)
+        }
+        //if clear history selected.
+        if indexPath.row == 0{
+            //new alert for showing about
+            let alertController = UIAlertController(title: "Delete all search history", message: "Are you sure you want to delete all previous search history? This cannot be undone.", preferredStyle: .alert)
+            
+            let  OKButton = UIAlertAction(title: "Yes", style: .destructive, handler: { (action) -> Void in
+                self.model.options.doOption(optionNum: indexPath.row)
+            })
+            let  NoButton = UIAlertAction(title: "No", style: .destructive, handler: { (action) -> Void in
+              
+            })
+            
+            alertController.addAction(OKButton)
+            alertController.addAction(NoButton)
             self.present(alertController, animated: true, completion: nil)
         }
     }

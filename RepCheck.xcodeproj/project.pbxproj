@@ -14,7 +14,7 @@
 		A620436920EF0FF100B48504 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A620436820EF0FF100B48504 /* HistoryViewController.swift */; };
 		A63C7E5D20F5C0970083C3B0 /* SearchFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C7E5C20F5C0970083C3B0 /* SearchFields.swift */; };
 		A63C7E5F20F60F990083C3B0 /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C7E5E20F60F990083C3B0 /* HistoryList.swift */; };
-		A66A14C721085A6F00A4CA71 /* RepCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A66A14C521085A6F00A4CA71 /* RepCheck.xcdatamodeld */; };
+		A66A14C82108B8A000A4CA71 /* RepCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A66A14C521085A6F00A4CA71 /* RepCheck.xcdatamodeld */; };
 		A69C843B20F8EA42005C2B62 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C843A20F8EA42005C2B62 /* MasterViewController.swift */; };
 		A6A7F57120D0F109004D7234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F57020D0F109004D7234 /* AppDelegate.swift */; };
 		A6A7F57320D0F109004D7234 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F57220D0F109004D7234 /* OptionsViewController.swift */; };
@@ -332,7 +332,7 @@
 				A6DA056920EDC7F400186D94 /* Step2ViewController.swift in Sources */,
 				A620436720EF0FDC00B48504 /* DetailsViewController.swift in Sources */,
 				A620436920EF0FF100B48504 /* HistoryViewController.swift in Sources */,
-				A66A14C721085A6F00A4CA71 /* RepCheck.xcdatamodeld in Sources */,
+				A66A14C82108B8A000A4CA71 /* RepCheck.xcdatamodeld in Sources */,
 				A6DE68CD20F8F3A90028139F /* Result.swift in Sources */,
 				A60E47FA20EDEC8E0072F28E /* Step3ViewController.swift in Sources */,
 				A6A7F57320D0F109004D7234 /* OptionsViewController.swift in Sources */,
