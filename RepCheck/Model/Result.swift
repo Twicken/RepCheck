@@ -10,7 +10,13 @@ import Foundation
 
 class Result{
     
-    var title = ""
+    var title:String
+    var displayLink:String
+    var snippet:String
     
-    init(){}
+    init(title: String, displayLink: String, snippet: String){
+        self.title = title
+        self.displayLink = displayLink
+        self.snippet = snippet
+    }
 }

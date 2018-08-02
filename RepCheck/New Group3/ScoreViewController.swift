@@ -33,7 +33,7 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
     }
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
-        var handler = APIHandler()
+        let handler = APIHandler()
         handler.getResult()
         var message = "Would you like to save this search to history?"
         if model.history.currentlyModifyingSearch >= 0 {

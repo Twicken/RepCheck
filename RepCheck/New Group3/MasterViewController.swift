@@ -48,7 +48,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Return the number of cells in the tableview
-        return 1//model.results.count
+        return model.resultList.results.count
     }
     
     
@@ -58,7 +58,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         // Access the default properties of the prototype cell
         // Must set you prototype cell be display the subtitle
         // in storyboard
-        //cell.textLabel?.text = model.results[indexPath.item].title
+        cell.textLabel?.text = model.resultList.results[indexPath.item].title
         cell.detailTextLabel?.text = "Result"
         
         return cell

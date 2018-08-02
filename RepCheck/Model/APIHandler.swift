@@ -16,7 +16,6 @@ class APIHandler{
     
     init(){}
     
-    //stores a list of results. will be gotten from api later on
     var score = 0//for storing repscore in future
     
     
@@ -27,13 +26,33 @@ class APIHandler{
     private let base_url:String = "https://www.googleapis.com/customsearch/v1?"
     private let key: String = "key=AIzaSyBCvEMwB1ilI3fPYyJcG7ooHXAZJpQN6xQ&"
     private let searchEngineID: String = "cx=005290861916128438356:ftf0fdsm8m0&"
-    private let query:String = "q=" + Model.sharedInstance.searchFields.searchFieldsStep1["firstName"]!
+    private var query:String = "q="
+    var searchFields = Model.sharedInstance.searchFields
+    
+    func buildQuery(){
+
+        //cant loop here due to the disordered nature of dictionaries in swift.
+        query = query + searchFields.searchFieldsStep1["firstName"]! + " "
+        query = query + searchFields.searchFieldsStep1["middleName"]! + " "
+        query = query + searchFields.searchFieldsStep1["surname"]! + " "
+        query = query + searchFields.searchFieldsStep1["country"]! + " "
+        
+        query = query + searchFields.searchFieldsStep2["town"]! + " "
+        query = query + searchFields.searchFieldsStep2["work"]! + " "
+        query = query + searchFields.searchFieldsStep2["school"]! + " "
+        query = query + searchFields.searchFieldsStep2["optional"]!
+    }
+    
+    
+    
     
     //builds url and will fill the result list for our search
     func getResult()
     {
         //clear the results list
         Model.sharedInstance.resultList.results = []
+        buildQuery()
+        print(query)
         let url = base_url + key + searchEngineID + query
         
         let escapedAddress = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
@@ -75,15 +94,11 @@ class APIHandler{
                     {
                         for r in allResults
                         {
-                            let title = r["title"] as! String
-                            print(title)
-                            
+                            let resultObject = Result(title: r["title"] as! String, displayLink: r["displayLink"] as! String, snippet: r["snippet"] as! String)
+                            Model.sharedInstance.resultList.results.append(resultObject)
                         }
                     }
-                    else
-                    {
-                        Model.sharedInstance.resultList.results.append(Result())
-                    }
+
                     DispatchQueue.main.async(execute:{
                         self.delegate?.updateUI()
                     })
