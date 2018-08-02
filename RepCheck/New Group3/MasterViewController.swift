@@ -59,7 +59,6 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         // Must set you prototype cell be display the subtitle
         // in storyboard
         cell.textLabel?.text = model.resultList.results[indexPath.item].title
-        model.detailNum = indexPath.item
         cell.detailTextLabel?.text = "Result"
         
         return cell
@@ -68,6 +67,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
     //for detecting clicks
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //choose what details will be shown.
+        model.detailNum = indexPath.item
     }
     
 

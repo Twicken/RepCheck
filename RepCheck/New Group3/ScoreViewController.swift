@@ -9,8 +9,15 @@
 import UIKit
 import CoreData
 
-class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
-
+class ScoreViewController: UIViewController, UIPopoverControllerDelegate, Refresh {
+    
+    @IBOutlet weak var scoreBar: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    //use of delegate to update the score.
+    func updateUI() {
+        scoreLabel.text = String(model.currentScore)
+        self.scoreBar.image = cropSideImage(image: scoreBar.image!)
+    }
     //Get the model.
     var model = Model.sharedInstance
     @IBOutlet weak var newSearchButton: UIButton!
@@ -34,7 +41,9 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         let handler = APIHandler()
+        handler.delegate=self
         handler.getResult()
+
         var message = "Would you like to save this search to history?"
         if model.history.currentlyModifyingSearch >= 0 {
             message = "Would you like to update this search in history?"
@@ -70,5 +79,20 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate {
         //if needed in future
     }
     
+    //for cropping our score bar, depending on the score.
+    func cropSideImage(image: UIImage) -> UIImage {
+        let height = CGFloat(image.size.height)
+        var scoreMultiplier: CGFloat
+        scoreMultiplier = (CGFloat(model.currentScore)/100)
+        let rect = CGRect(x: 0, y: 0, width: image.size.width * scoreMultiplier, height: height)
+        return cropImage(image: image, toRect: rect)
 
+    }
+
+
+    func cropImage(image:UIImage, toRect rect:CGRect) -> UIImage{
+        let croppedCGImage:CGImage = (image.cgImage?.cropping(to: rect))!
+        let croppedImage = UIImage(cgImage: croppedCGImage)
+        return croppedImage
+    }
 }

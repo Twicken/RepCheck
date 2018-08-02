@@ -23,7 +23,7 @@ class Model{
     var resultList : ResultList
     //used for storing which detail has been pressed.
     var detailNum = 0
-    
+    var currentScore = 0
     //initialise the model
     private init(){
         ///instansiate the options

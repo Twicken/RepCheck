@@ -752,7 +752,7 @@
                                     <constraint firstAttribute="width" constant="67" id="S3p-X2-pa3"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mX-8d-UfF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mX-8d-UfF">
                                 <rect key="frame" x="85" y="132" width="189" height="283"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="283" id="Jks-B1-mt1"/>
@@ -764,6 +764,9 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bar" translatesAutoresizingMaskIntoConstraints="NO" id="4tX-XF-Qs1">
                                 <rect key="frame" x="29" y="432" width="317" height="31"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" adjustable="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="eaS-bl-zZe"/>
                                 </constraints>
@@ -801,7 +804,7 @@
                             <constraint firstItem="2mX-8d-UfF" firstAttribute="leading" secondItem="Tj0-Vw-20e" secondAttribute="leading" constant="85" id="GuE-fu-BC8"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F1B-ab-zJH" secondAttribute="trailing" constant="20" symbolic="YES" id="Qh8-xi-7Lt"/>
                             <constraint firstItem="Tj0-Vw-20e" firstAttribute="trailing" secondItem="uF0-zF-hku" secondAttribute="trailing" constant="90" id="X5c-jT-dHK"/>
-                            <constraint firstItem="4tX-XF-Qs1" firstAttribute="centerX" secondItem="Tj0-Vw-20e" secondAttribute="centerX" id="XEh-PS-97r"/>
+                            <constraint firstItem="4tX-XF-Qs1" firstAttribute="leading" secondItem="Tj0-Vw-20e" secondAttribute="leading" constant="29" id="XRR-BJ-jjm"/>
                             <constraint firstItem="4tX-XF-Qs1" firstAttribute="top" secondItem="uF0-zF-hku" secondAttribute="bottom" constant="17" id="bWR-Pt-1ba"/>
                             <constraint firstItem="bLY-dc-Hfs" firstAttribute="top" secondItem="P85-QQ-xPA" secondAttribute="bottom" constant="0.5" id="cDa-t4-5t9"/>
                             <constraint firstItem="P85-QQ-xPA" firstAttribute="centerX" secondItem="Oc7-0h-xnu" secondAttribute="centerX" id="dmC-b4-ZpO"/>
@@ -821,6 +824,8 @@
                     <connections>
                         <outlet property="backButton" destination="F1B-ab-zJH" id="AvU-6w-j0h"/>
                         <outlet property="newSearchButton" destination="e5A-BC-bjH" id="Cap-Q5-72m"/>
+                        <outlet property="scoreBar" destination="4tX-XF-Qs1" id="XJN-5S-Rxk"/>
+                        <outlet property="scoreLabel" destination="2mX-8d-UfF" id="7Tm-Jn-vje"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Oa-bN-Atp" userLabel="First Responder" sceneMemberID="firstResponder"/>

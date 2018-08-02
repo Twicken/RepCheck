@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+
+//sets up protocol to be used with delegate
 protocol Refresh{
     func updateUI()
 }
@@ -15,9 +17,6 @@ protocol Refresh{
 class APIHandler{
     
     init(){}
-    
-    var score = 0//for storing repscore in future
-    
     
     var delegate: Refresh?
     
@@ -98,11 +97,12 @@ class APIHandler{
                             Model.sharedInstance.resultList.results.append(resultObject)
                         }
                     }
-
-                    DispatchQueue.main.async(execute:{
-                        self.delegate?.updateUI()
-                    })
                 }
+                Model.sharedInstance.resultList.calculateScore()
+                DispatchQueue.main.async(execute:{
+                    self.delegate?.updateUI()
+                })
+                
             }
             
         })
