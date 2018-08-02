@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A607DC0C21114AFA000E2A9B /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A607DC0B21114AFA000E2A9B /* APIHandler.swift */; };
 		A60E47FA20EDEC8E0072F28E /* Step3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E47F920EDEC8E0072F28E /* Step3ViewController.swift */; };
 		A612CDE220E416FD00616076 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A612CDE120E416FD00616076 /* Splash.storyboard */; };
 		A620436520EF028700B48504 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A620436420EF028700B48504 /* ScoreViewController.swift */; };
@@ -14,6 +15,7 @@
 		A620436920EF0FF100B48504 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A620436820EF0FF100B48504 /* HistoryViewController.swift */; };
 		A63C7E5D20F5C0970083C3B0 /* SearchFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C7E5C20F5C0970083C3B0 /* SearchFields.swift */; };
 		A63C7E5F20F60F990083C3B0 /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C7E5E20F60F990083C3B0 /* HistoryList.swift */; };
+		A6629F2F210D82D000384682 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6629F2E210D82D000384682 /* Result.swift */; };
 		A66A14C82108B8A000A4CA71 /* RepCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A66A14C521085A6F00A4CA71 /* RepCheck.xcdatamodeld */; };
 		A69C843B20F8EA42005C2B62 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C843A20F8EA42005C2B62 /* MasterViewController.swift */; };
 		A6A7F57120D0F109004D7234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A7F57020D0F109004D7234 /* AppDelegate.swift */; };
@@ -27,7 +29,7 @@
 		A6DA056520E7B88500186D94 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056420E7B88500186D94 /* Model.swift */; };
 		A6DA056720E7BAD500186D94 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056620E7BAD500186D94 /* Step1ViewController.swift */; };
 		A6DA056920EDC7F400186D94 /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DA056820EDC7F400186D94 /* Step2ViewController.swift */; };
-		A6DE68CD20F8F3A90028139F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DE68CC20F8F3A90028139F /* Result.swift */; };
+		A6DE68CD20F8F3A90028139F /* ResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DE68CC20F8F3A90028139F /* ResultList.swift */; };
 		BECF0CD220F87910008BEEF2 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF0CD120F87910008BEEF2 /* Recording.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A607DC0B21114AFA000E2A9B /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		A60E47F920EDEC8E0072F28E /* Step3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3ViewController.swift; sourceTree = "<group>"; };
 		A612CDE120E416FD00616076 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		A620436420EF028700B48504 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		A620436820EF0FF100B48504 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A63C7E5C20F5C0970083C3B0 /* SearchFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFields.swift; sourceTree = "<group>"; };
 		A63C7E5E20F60F990083C3B0 /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
+		A6629F2E210D82D000384682 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A66A14C621085A6F00A4CA71 /* RepCheck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepCheck.xcdatamodel; sourceTree = "<group>"; };
 		A69C843A20F8EA42005C2B62 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		A6A7F56D20D0F109004D7234 /* RepCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +79,7 @@
 		A6DA056420E7B88500186D94 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A6DA056620E7BAD500186D94 /* Step1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
 		A6DA056820EDC7F400186D94 /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
-		A6DE68CC20F8F3A90028139F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A6DE68CC20F8F3A90028139F /* ResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultList.swift; sourceTree = "<group>"; };
 		BECF0CD120F87910008BEEF2 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +115,9 @@
 				A6DA056420E7B88500186D94 /* Model.swift */,
 				A63C7E5C20F5C0970083C3B0 /* SearchFields.swift */,
 				A63C7E5E20F60F990083C3B0 /* HistoryList.swift */,
-				A6DE68CC20F8F3A90028139F /* Result.swift */,
+				A6DE68CC20F8F3A90028139F /* ResultList.swift */,
+				A6629F2E210D82D000384682 /* Result.swift */,
+				A607DC0B21114AFA000E2A9B /* APIHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,7 +339,8 @@
 				A620436720EF0FDC00B48504 /* DetailsViewController.swift in Sources */,
 				A620436920EF0FF100B48504 /* HistoryViewController.swift in Sources */,
 				A66A14C82108B8A000A4CA71 /* RepCheck.xcdatamodeld in Sources */,
-				A6DE68CD20F8F3A90028139F /* Result.swift in Sources */,
+				A6DE68CD20F8F3A90028139F /* ResultList.swift in Sources */,
+				A6629F2F210D82D000384682 /* Result.swift in Sources */,
 				A60E47FA20EDEC8E0072F28E /* Step3ViewController.swift in Sources */,
 				A6A7F57320D0F109004D7234 /* OptionsViewController.swift in Sources */,
 				A63C7E5F20F60F990083C3B0 /* HistoryList.swift in Sources */,
@@ -342,6 +349,7 @@
 				A63C7E5D20F5C0970083C3B0 /* SearchFields.swift in Sources */,
 				A6DA056520E7B88500186D94 /* Model.swift in Sources */,
 				A620436520EF028700B48504 /* ScoreViewController.swift in Sources */,
+				A607DC0C21114AFA000E2A9B /* APIHandler.swift in Sources */,
 				A69C843B20F8EA42005C2B62 /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

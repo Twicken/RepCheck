@@ -2,15 +2,16 @@
 //  Result.swift
 //  RepCheck
 //
-//  Created by Joel Wall on 28/7/18.
+//  Created by Joel Wall on 13/7/18.
 //  Copyright © 2018 Joel Wall. All rights reserved.
 //
-
 import Foundation
+import UIKit
 
-class Result{
-    
-    var title = ""
-    
-    init(){}
+
+class ResultList{
+    var results: [Result] = []
 }
+
+
+

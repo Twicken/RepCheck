@@ -10,6 +10,8 @@ import Foundation
 
 //holds all out model data once instansiated
 class Model{
+    
+    
     static let sharedInstance = Model()
     //holds our options portion of model data
     let options : Options
@@ -18,7 +20,7 @@ class Model{
     //our search history (to be replaced by database)
     var history : HistoryList
     //for storing our search result
-    var result : Result
+    var resultList : ResultList
     
     //initialise the model
     private init(){
@@ -28,6 +30,9 @@ class Model{
         self.searchFields = SearchFields()
         //do the same for history
         self.history = HistoryList()
-        self.result = Result()
+        self.resultList = ResultList()
     }
+    
+
+    
 }

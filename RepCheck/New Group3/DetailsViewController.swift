@@ -19,6 +19,7 @@ class DetailsViewController: UIViewController {
     }
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
+        //Model.sharedInstance.getResult()
         super.viewDidLoad()
     }
     
