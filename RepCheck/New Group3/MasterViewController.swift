@@ -59,6 +59,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         // Must set you prototype cell be display the subtitle
         // in storyboard
         cell.textLabel?.text = model.resultList.results[indexPath.item].title
+        model.detailNum = indexPath.item
         cell.detailTextLabel?.text = "Result"
         
         return cell

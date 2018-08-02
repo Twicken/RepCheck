@@ -10,6 +10,9 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var linkLabel: UILabel!
+    @IBOutlet weak var snippetLabel: UILabel!
     //Outlet for talking to our back button in view
     @IBOutlet weak var backButton: UIButton!
     //If button is back button is pressed, go back to previous view controller
@@ -19,7 +22,11 @@ class DetailsViewController: UIViewController {
     }
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
-        //Model.sharedInstance.getResult()
+        titleLabel.text = Model.sharedInstance.resultList.results[Model.sharedInstance.detailNum].title
+        linkLabel.text = Model.sharedInstance.resultList.results[Model.sharedInstance.detailNum].displayLink
+
+        snippetLabel.text = Model.sharedInstance.resultList.results[Model.sharedInstance.detailNum].snippet
+
         super.viewDidLoad()
     }
     

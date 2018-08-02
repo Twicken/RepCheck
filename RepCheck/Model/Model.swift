@@ -21,6 +21,8 @@ class Model{
     var history : HistoryList
     //for storing our search result
     var resultList : ResultList
+    //used for storing which detail has been pressed.
+    var detailNum = 0
     
     //initialise the model
     private init(){
