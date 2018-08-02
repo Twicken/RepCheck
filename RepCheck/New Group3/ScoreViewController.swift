@@ -84,6 +84,10 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate, Refres
         let height = CGFloat(image.size.height)
         var scoreMultiplier: CGFloat
         scoreMultiplier = (CGFloat(model.currentScore)/100)
+        //bump the multiplier up so that a line will still appear and have a valid image size if it turns out to be 0.
+        if scoreMultiplier == CGFloat(0.00){
+            scoreMultiplier = 0.01
+        }
         let rect = CGRect(x: 0, y: 0, width: image.size.width * scoreMultiplier, height: height)
         return cropImage(image: image, toRect: rect)
 
