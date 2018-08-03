@@ -34,6 +34,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     // MARK: - Table view data source
     // The number of segments in the table view.
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,7 +47,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         return model.history.historyList.count
     }
     
-    
+    //populates the table view with our history
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath)
         cell.textLabel?.text = model.history.historyList[indexPath.item].searchFieldsStep1["firstName"]! + " " +  model.history.historyList[indexPath.item].searchFieldsStep1["surname"]!

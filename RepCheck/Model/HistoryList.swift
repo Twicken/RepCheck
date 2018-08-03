@@ -9,7 +9,7 @@
 import CoreData
 import UIKit
 class HistoryList{
-    //stores a list of searches. later to be done with database.
+    //stores a list of searches. this is fetched from the database.
     var historyList = [SearchFields]()
     //-1 means that we are not modifying a search currently.
     var currentlyModifyingSearch :Int = -1
@@ -103,6 +103,7 @@ class HistoryList{
         }
     }
     
+    //deletes all from database.
     func deleteAll(){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Search")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)

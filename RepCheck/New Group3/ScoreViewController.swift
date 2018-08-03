@@ -13,16 +13,17 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate, Refres
     
     @IBOutlet weak var scoreBar: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var newSearchButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    
     //use of delegate to update the score.
     func updateUI() {
         scoreLabel.text = String(model.currentScore)
         self.scoreBar.image = cropSideImage(image: scoreBar.image!)
     }
     //Get the model.
+    
     var model = Model.sharedInstance
-    @IBOutlet weak var newSearchButton: UIButton!
-    //Outlet for talking to our view
-    @IBOutlet weak var backButton: UIButton!
     //If button is back button is pressed, go back to previous view controller
     //This has to be done programatically, as we have a custom back button.
     @IBAction func triggered(_ sender: Any) {
@@ -75,10 +76,6 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate, Refres
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        //if needed in future
-    }
-    
     //for cropping our score bar, depending on the score.
     func cropSideImage(image: UIImage) -> UIImage {
         let height = CGFloat(image.size.height)
@@ -92,8 +89,6 @@ class ScoreViewController: UIViewController, UIPopoverControllerDelegate, Refres
         return cropImage(image: image, toRect: rect)
 
     }
-
-
     func cropImage(image:UIImage, toRect rect:CGRect) -> UIImage{
         let croppedCGImage:CGImage = (image.cgImage?.cropping(to: rect))!
         let croppedImage = UIImage(cgImage: croppedCGImage)

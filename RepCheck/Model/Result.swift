@@ -8,6 +8,7 @@
 
 import Foundation
 
+//used to store a result gotten back from the google custom search api
 class Result{
     
     var title:String

@@ -12,8 +12,8 @@ import UIKit
 class MasterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var backButton: UIButton!
-    //This outlet connects the controller to the view so we can modify it. changes mase to this variable change the view!
     @IBOutlet weak var tableView: UITableView!
+    
     //Get the model.
     var model = Model.sharedInstance
     
@@ -42,7 +42,6 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: - Table view data source
     // The number of segments in the table view.
     func numberOfSections(in tableView: UITableView) -> Int {
-        //We just need one segmenet since we don't have many options.
         return 1
     }
     
@@ -51,13 +50,9 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         return model.resultList.results.count
     }
     
-    
+    //populates our table view
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "URLCell", for: indexPath)
-        
-        // Access the default properties of the prototype cell
-        // Must set you prototype cell be display the subtitle
-        // in storyboard
         cell.textLabel?.text = model.resultList.results[indexPath.item].title
         cell.detailTextLabel?.text = "Result"
         

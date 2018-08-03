@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-
+//stores a list of results gotten back from the custom search api.
 class ResultList{
     var results: [Result] = []
     
@@ -18,7 +18,6 @@ class ResultList{
         var sites = 0.0
         var searchfields = Model.sharedInstance.searchFields
         for result in results{
-            print(result.displayLink)
             if result.displayLink == "www.facebook.com" && searchfields.switches["facebook"]!{
                 sites = sites + 1
             }

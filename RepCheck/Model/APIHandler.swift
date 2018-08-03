@@ -2,7 +2,7 @@
 //  APIHandler.swift
 //  RepCheck
 //
-//  Created by Joel Wall on 30/6/18.
+//  Created by Joel Wall on 3/8/18.
 //  Copyright © 2018 Joel Wall. All rights reserved.
 //
 
@@ -13,13 +13,15 @@ import UIKit
 protocol Refresh{
     func updateUI()
 }
-//holds all out model data once instansiated
+//This class is only used in the getting of data from our google search API in the score scene.
 class APIHandler{
     
     init(){}
     
+    //delegate for refreshing the screen
     var delegate: Refresh?
     
+    //Start a session
     private let session = URLSession.shared
     
     private let base_url:String = "https://www.googleapis.com/customsearch/v1?"
@@ -28,6 +30,7 @@ class APIHandler{
     private var query:String = "q="
     var searchFields = Model.sharedInstance.searchFields
     
+    //this makes us a search query based on the user inputs during the first 2 steps.
     func buildQuery(){
 
         //cant loop here due to the disordered nature of dictionaries in swift.
@@ -50,8 +53,8 @@ class APIHandler{
     {
         //clear the results list
         Model.sharedInstance.resultList.results = []
+        //build the query
         buildQuery()
-        print(query)
         let url = base_url + key + searchEngineID + query
         
         let escapedAddress = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
@@ -59,12 +62,13 @@ class APIHandler{
         if let url = URL(string: escapedAddress!)
         {
             let request = URLRequest(url: url)
+            //now get the data and have it be stored in the resultList in our model.
             getData(request, element: "items")
             
         }
     }
     
-    //gets the data from the api
+    //gets the data from the api and stores it in the resulList inside the model.
     func getData(_ request: URLRequest, element: String)
     {
         let task = session.dataTask(with: request, completionHandler: {data, response, downloadError in
@@ -93,11 +97,13 @@ class APIHandler{
                     {
                         for r in allResults
                         {
+                            //save the title url and text snippet from search result.
                             let resultObject = Result(title: r["title"] as! String, displayLink: r["displayLink"] as! String, snippet: r["snippet"] as! String)
                             Model.sharedInstance.resultList.results.append(resultObject)
                         }
                     }
                 }
+                //calculate the score for the user, so it can be displayed. then refresh.
                 Model.sharedInstance.resultList.calculateScore()
                 DispatchQueue.main.async(execute:{
                     self.delegate?.updateUI()
