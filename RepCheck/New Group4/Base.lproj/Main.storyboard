@@ -215,7 +215,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-Nf-NBO">
-                                <rect key="frame" x="166" y="564" width="42" height="30"/>
+                                <rect key="frame" x="166.5" y="564" width="42" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="resetbutton1"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -429,7 +429,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YN-2H-Jqo">
-                                <rect key="frame" x="166" y="564" width="42" height="30"/>
+                                <rect key="frame" x="166.5" y="564" width="42" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reset">
@@ -669,7 +669,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxd-Go-5sw">
-                                <rect key="frame" x="167" y="564" width="42" height="30"/>
+                                <rect key="frame" x="166.5" y="564" width="42" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reset">
@@ -766,7 +766,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1KN-5r-JwP">
-                                <rect key="frame" x="0.0" y="112" width="375" height="371"/>
+                                <rect key="frame" x="0.0" y="112" width="374" height="371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mX-8d-UfF">
                                         <rect key="frame" x="76" y="20" width="189" height="283"/>
@@ -846,7 +846,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbt-eb-f5c">
-                                <rect key="frame" x="149" y="473" width="77" height="30"/>
+                                <rect key="frame" x="148.5" y="473" width="77" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="See Details">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -856,7 +856,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5A-BC-bjH">
-                                <rect key="frame" x="144" y="559" width="88" height="30"/>
+                                <rect key="frame" x="143.5" y="559" width="88" height="30"/>
                                 <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="New Search">
@@ -938,6 +938,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </variation>
                                 <connections>
                                     <action selector="triggered:" destination="qk5-Wm-vmE" eventType="primaryActionTriggered" id="zQK-9X-KYK"/>
                                 </connections>
@@ -979,9 +982,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="backButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOb-K7-THd">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="backButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOb-K7-THd">
                                 <rect key="frame" x="8" y="566" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.18988664199999999" green="0.20989491569999999" blue="0.98720854920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="← Back">
@@ -1010,6 +1012,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gOb-K7-THd" secondAttribute="trailing" constant="20" symbolic="YES" id="BKo-yE-Jtg"/>
+                            <constraint firstItem="GP6-sB-A2f" firstAttribute="bottom" secondItem="gOb-K7-THd" secondAttribute="bottom" constant="22" id="Ix6-Dh-XXD"/>
+                            <constraint firstItem="gOb-K7-THd" firstAttribute="leading" secondItem="GP6-sB-A2f" secondAttribute="leading" constant="8" id="xgN-Vv-ZPD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GP6-sB-A2f"/>
                     </view>
                     <connections>
@@ -1051,10 +1058,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fe4-ux-HAA">
-                                <rect key="frame" x="0.5" y="28.5" width="375" height="610"/>
+                                <rect key="frame" x="0.5" y="49" width="375" height="569"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P80-4j-Kbt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="610"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="569"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="vb9-uc-VLF">
@@ -1077,13 +1084,13 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CkU-wo-Cdo">
-                                <rect key="frame" x="157.5" y="20" width="60" height="0.0"/>
+                                <rect key="frame" x="157.5" y="20" width="60" height="20.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-mo-s8W">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNt-pj-A43">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1135,6 +1142,6 @@
         <image name="options" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="z90-wB-96Q"/>
+        <segue reference="flG-oU-fTc"/>
     </inferredMetricsTieBreakers>
 </document>
