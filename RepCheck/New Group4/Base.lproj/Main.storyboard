@@ -909,9 +909,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xD6-Gf-OHG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xD6-Gf-OHG">
                                 <rect key="frame" x="16" y="20" width="343" height="523"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="URLCell" id="ZyL-oD-kud">
@@ -931,9 +930,8 @@
                                     <outlet property="delegate" destination="qk5-Wm-vmE" id="Htt-SM-JkP"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="backButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60S-7O-Evc">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="backButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60S-7O-Evc">
                                 <rect key="frame" x="8" y="566" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.18988664199999999" green="0.20989491569999999" blue="0.98720854920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="← Back">
@@ -946,6 +944,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xD6-Gf-OHG" firstAttribute="leading" secondItem="yWg-Kh-yZV" secondAttribute="leading" constant="16" id="B3x-Xj-gf5"/>
+                            <constraint firstItem="60S-7O-Evc" firstAttribute="leading" secondItem="yWg-Kh-yZV" secondAttribute="leading" constant="8" id="JAB-DW-K99"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="60S-7O-Evc" secondAttribute="trailing" constant="20" symbolic="YES" id="LtE-5G-oRU"/>
+                            <constraint firstItem="60S-7O-Evc" firstAttribute="top" secondItem="xD6-Gf-OHG" secondAttribute="bottom" constant="23" id="XNr-vE-d3Y"/>
+                            <constraint firstItem="xD6-Gf-OHG" firstAttribute="top" secondItem="yWg-Kh-yZV" secondAttribute="top" id="giu-us-Fcr"/>
+                            <constraint firstItem="yWg-Kh-yZV" firstAttribute="trailing" secondItem="xD6-Gf-OHG" secondAttribute="trailing" constant="16" id="gyq-eU-MWC"/>
+                            <constraint firstItem="yWg-Kh-yZV" firstAttribute="bottom" secondItem="60S-7O-Evc" secondAttribute="bottom" constant="22" id="neF-LI-KRc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yWg-Kh-yZV"/>
                     </view>
                     <connections>
