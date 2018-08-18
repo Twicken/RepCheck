@@ -15,6 +15,7 @@
 		A620436920EF0FF100B48504 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A620436820EF0FF100B48504 /* HistoryViewController.swift */; };
 		A63C7E5D20F5C0970083C3B0 /* SearchFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C7E5C20F5C0970083C3B0 /* SearchFields.swift */; };
 		A63C7E5F20F60F990083C3B0 /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63C7E5E20F60F990083C3B0 /* HistoryList.swift */; };
+		A6550F0021278C1500DFDAD4 /* testModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6550EFF21278C1500DFDAD4 /* testModel.swift */; };
 		A6629F2F210D82D000384682 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6629F2E210D82D000384682 /* Result.swift */; };
 		A66A14C82108B8A000A4CA71 /* RepCheck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A66A14C521085A6F00A4CA71 /* RepCheck.xcdatamodeld */; };
 		A69C843B20F8EA42005C2B62 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C843A20F8EA42005C2B62 /* MasterViewController.swift */; };
@@ -34,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A6550EFA21278BDC00DFDAD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6A7F56520D0F109004D7234 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6A7F56C20D0F109004D7234;
+			remoteInfo = RepCheck;
+		};
 		A6A7F58220D0F10B004D7234 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6A7F56520D0F109004D7234 /* Project object */;
@@ -59,6 +67,8 @@
 		A620436820EF0FF100B48504 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A63C7E5C20F5C0970083C3B0 /* SearchFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFields.swift; sourceTree = "<group>"; };
 		A63C7E5E20F60F990083C3B0 /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
+		A6550EF521278BDB00DFDAD4 /* testModel.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testModel.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6550EFF21278C1500DFDAD4 /* testModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testModel.swift; sourceTree = "<group>"; };
 		A6629F2E210D82D000384682 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A66A14C621085A6F00A4CA71 /* RepCheck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepCheck.xcdatamodel; sourceTree = "<group>"; };
 		A69C843A20F8EA42005C2B62 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +94,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A6550EF221278BDB00DFDAD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6A7F56A20D0F109004D7234 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +155,7 @@
 				A6A7F56D20D0F109004D7234 /* RepCheck.app */,
 				A6A7F58120D0F10B004D7234 /* RepCheckTests.xctest */,
 				A6A7F58C20D0F10B004D7234 /* RepCheckUITests.xctest */,
+				A6550EF521278BDB00DFDAD4 /* testModel.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +177,7 @@
 		A6A7F58420D0F10B004D7234 /* RepCheckTests */ = {
 			isa = PBXGroup;
 			children = (
+				A6550EFF21278C1500DFDAD4 /* testModel.swift */,
 				A6A7F58520D0F10B004D7234 /* RepCheckTests.swift */,
 				A6A7F58720D0F10B004D7234 /* Info.plist */,
 			);
@@ -205,6 +224,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A6550EF421278BDB00DFDAD4 /* testModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6550EFE21278BDC00DFDAD4 /* Build configuration list for PBXNativeTarget "testModel" */;
+			buildPhases = (
+				A6550EF121278BDB00DFDAD4 /* Sources */,
+				A6550EF221278BDB00DFDAD4 /* Frameworks */,
+				A6550EF321278BDB00DFDAD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6550EFB21278BDC00DFDAD4 /* PBXTargetDependency */,
+			);
+			name = testModel;
+			productName = testModel;
+			productReference = A6550EF521278BDB00DFDAD4 /* testModel.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A6A7F56C20D0F109004D7234 /* RepCheck */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6A7F59520D0F10B004D7234 /* Build configuration list for PBXNativeTarget "RepCheck" */;
@@ -268,6 +305,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Joel Wall";
 				TargetAttributes = {
+					A6550EF421278BDB00DFDAD4 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = A6A7F56C20D0F109004D7234;
+					};
 					A6A7F56C20D0F109004D7234 = {
 						CreatedOnToolsVersion = 9.4;
 					};
@@ -297,11 +338,19 @@
 				A6A7F56C20D0F109004D7234 /* RepCheck */,
 				A6A7F58020D0F10B004D7234 /* RepCheckTests */,
 				A6A7F58B20D0F10B004D7234 /* RepCheckUITests */,
+				A6550EF421278BDB00DFDAD4 /* testModel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A6550EF321278BDB00DFDAD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6A7F56B20D0F109004D7234 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +379,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A6550EF121278BDB00DFDAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6A7F56920D0F109004D7234 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A7F58620D0F10B004D7234 /* RepCheckTests.swift in Sources */,
+				A6550F0021278C1500DFDAD4 /* testModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +431,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A6550EFB21278BDC00DFDAD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6A7F56C20D0F109004D7234 /* RepCheck */;
+			targetProxy = A6550EFA21278BDC00DFDAD4 /* PBXContainerItemProxy */;
+		};
 		A6A7F58320D0F10B004D7234 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A6A7F56C20D0F109004D7234 /* RepCheck */;
@@ -406,6 +468,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A6550EFC21278BDC00DFDAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = testModel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TeamTweaker.testModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepCheck.app/RepCheck";
+			};
+			name = Debug;
+		};
+		A6550EFD21278BDC00DFDAD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = testModel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TeamTweaker.testModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepCheck.app/RepCheck";
+			};
+			name = Release;
+		};
 		A6A7F59320D0F10B004D7234 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -641,6 +741,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A6550EFE21278BDC00DFDAD4 /* Build configuration list for PBXNativeTarget "testModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6550EFC21278BDC00DFDAD4 /* Debug */,
+				A6550EFD21278BDC00DFDAD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A6A7F56820D0F109004D7234 /* Build configuration list for PBXProject "RepCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
