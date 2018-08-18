@@ -33,6 +33,27 @@ class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         resetInputs()
     }
     
+    // To get shake gesture
+        override func viewDidLoad() {
+        super.viewDidLoad()
+        self.becomeFirstResponder()
+    }
+    
+    // Become first responder to get shake motion
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion and reset values to default
+    // Shake motion approved by instructor Fardin as Cocoa implementation
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            resetInputs()
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         //remember the past input.
         firstNameBox.text = model.searchFields.searchFieldsStep1["firstName"]

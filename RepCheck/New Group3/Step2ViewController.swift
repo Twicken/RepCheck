@@ -41,6 +41,23 @@ class Step2ViewController: UIViewController {
         otherBox.text = ""
     }
     
+    // Become first responder to get shake motion
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion and reset values to default
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            townBox.text = ""
+            workBox.text = ""
+            schoolBox.text = ""
+            otherBox.text = ""
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //get the past inputs.
