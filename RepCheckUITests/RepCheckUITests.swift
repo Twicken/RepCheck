@@ -93,7 +93,7 @@ class RepCheckUITests: XCTestCase {
         XCTAssertEqual(app.staticTexts.count, 7)
         
         // Test that there are 8 buttons on the screen
-        XCTAssertEqual(app.buttons.count,8)
+        XCTAssertEqual(app.buttons.count,9)
         
         // Test that there are only 1 image on the screen
         XCTAssertEqual(app.images.count,1)
