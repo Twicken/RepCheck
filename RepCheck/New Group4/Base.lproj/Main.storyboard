@@ -975,9 +975,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Snippit" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTG-yK-esD">
-                                <rect key="frame" x="16" y="178" width="343" height="380"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snippit" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTG-yK-esD">
+                                <rect key="frame" x="16" y="178" width="343" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="179" id="MQp-Iv-SLL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -996,16 +998,17 @@
                                     <action selector="triggered:" destination="Ng9-t7-vnr" eventType="touchUpInside" id="gG9-we-zUm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLz-Y3-ryT">
-                                <rect key="frame" x="16" y="54" width="343" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLz-Y3-ryT">
+                                <rect key="frame" x="16" y="54" width="343" height="26"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P21-7l-yJL">
-                                <rect key="frame" x="16" y="131" width="343" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P21-7l-yJL">
+                                <rect key="frame" x="16" y="104" width="343" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="nbb-7m-IMu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1014,7 +1017,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gOb-K7-THd" secondAttribute="trailing" constant="20" symbolic="YES" id="BKo-yE-Jtg"/>
+                            <constraint firstItem="GP6-sB-A2f" firstAttribute="trailing" secondItem="P21-7l-yJL" secondAttribute="trailing" constant="16" id="E4Z-CG-To9"/>
                             <constraint firstItem="GP6-sB-A2f" firstAttribute="bottom" secondItem="gOb-K7-THd" secondAttribute="bottom" constant="22" id="Ix6-Dh-XXD"/>
+                            <constraint firstItem="P21-7l-yJL" firstAttribute="top" secondItem="cLz-Y3-ryT" secondAttribute="bottom" constant="24" id="OcT-eH-YiG"/>
+                            <constraint firstItem="cTG-yK-esD" firstAttribute="leading" secondItem="GP6-sB-A2f" secondAttribute="leading" constant="16" id="QCc-0G-Dva"/>
+                            <constraint firstItem="cLz-Y3-ryT" firstAttribute="leading" secondItem="GP6-sB-A2f" secondAttribute="leading" constant="16" id="Stw-ft-zXP"/>
+                            <constraint firstItem="GP6-sB-A2f" firstAttribute="trailing" secondItem="cTG-yK-esD" secondAttribute="trailing" constant="16" id="bTK-YE-I0u"/>
+                            <constraint firstItem="cTG-yK-esD" firstAttribute="top" secondItem="P21-7l-yJL" secondAttribute="bottom" constant="35" id="fAT-iZ-rXo"/>
+                            <constraint firstItem="P21-7l-yJL" firstAttribute="leading" secondItem="cLz-Y3-ryT" secondAttribute="leading" id="ibW-id-Q5T"/>
+                            <constraint firstItem="P21-7l-yJL" firstAttribute="leading" secondItem="GP6-sB-A2f" secondAttribute="leading" constant="16" id="kyC-Mm-h9n"/>
+                            <constraint firstItem="cLz-Y3-ryT" firstAttribute="top" secondItem="GP6-sB-A2f" secondAttribute="top" constant="34" id="rMi-3g-Q9L"/>
+                            <constraint firstItem="P21-7l-yJL" firstAttribute="trailing" secondItem="cTG-yK-esD" secondAttribute="trailing" id="uNu-vh-QVU"/>
+                            <constraint firstItem="GP6-sB-A2f" firstAttribute="trailing" secondItem="cLz-Y3-ryT" secondAttribute="trailing" constant="16" id="x17-43-FJK"/>
                             <constraint firstItem="gOb-K7-THd" firstAttribute="leading" secondItem="GP6-sB-A2f" secondAttribute="leading" constant="8" id="xgN-Vv-ZPD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GP6-sB-A2f"/>
