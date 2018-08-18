@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     //Get the model.
     var model = Model.sharedInstance
@@ -33,11 +33,27 @@ class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         resetInputs()
     }
     
-    // To get shake gesture
+    // To get shake gesture and hide the keyboard once Done selected
+    // Shake Gesture as approved by instructor Fardin as Cocoa substitute.
         override func viewDidLoad() {
         super.viewDidLoad()
+        firstNameBox.delegate=self
+        middleNameBox.delegate=self
+        surnameBox.delegate=self
+        
         self.becomeFirstResponder()
+            
     }
+    
+    // Workaround to allow user to hide the iOS keyboard after input
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstNameBox.resignFirstResponder()
+        middleNameBox.resignFirstResponder()
+        surnameBox.resignFirstResponder()
+        
+        return true
+    }
+    
     
     // Become first responder to get shake motion
     override var canBecomeFirstResponder: Bool {

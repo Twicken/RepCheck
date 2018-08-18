@@ -109,7 +109,7 @@
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
                                         <attributedString key="attributedText"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Optional" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tBU-3t-dpZ">
                                         <rect key="frame" x="184" y="78" width="179" height="30"/>
@@ -117,7 +117,7 @@
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
                                         <attributedString key="attributedText"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Recommended" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0AE-c4-Qg2">
                                         <rect key="frame" x="185" y="127" width="179" height="30"/>
@@ -125,7 +125,7 @@
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
                                         <attributedString key="attributedText"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Middle Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ2-t6-GNh">
                                         <rect key="frame" x="20" y="82" width="106" height="21"/>
@@ -318,19 +318,19 @@
                                         <rect key="frame" x="20" y="48" width="343" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="townbox"/>
                                         <attributedString key="attributedText"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Optional" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHV-cR-6jm">
                                         <rect key="frame" x="20" y="113" width="343" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="workbox"/>
                                         <attributedString key="attributedText"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Optional" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1s-Oc-wgU">
                                         <rect key="frame" x="20" y="179" width="343" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="schoolbox"/>
                                         <attributedString key="attributedText"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Town/City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DM-Xg-HYd">
                                         <rect key="frame" x="131" y="20" width="126" height="21"/>
@@ -354,7 +354,7 @@
                                         <rect key="frame" x="20" y="245" width="343" height="30"/>
                                         <accessibility key="accessibilityConfiguration" identifier="otherbox"/>
                                         <attributedString key="attributedText"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional (Any other relevant info)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKg-Si-g7p">
                                         <rect key="frame" x="67" y="217" width="254" height="21"/>
