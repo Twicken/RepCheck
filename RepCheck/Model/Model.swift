@@ -8,7 +8,7 @@
 
 import Foundation
 
-//holds all out model data once instansiated
+//holds all our model data once instantiated
 class Model{
     
     
@@ -26,9 +26,9 @@ class Model{
     var currentScore = 0
     //initialise the model
     private init(){
-        ///instansiate the options
+        ///instantiate the options
         self.options = Options()
-        //instansiate the search box storagae.
+        //instantiate the search box storagae.
         self.searchFields = SearchFields()
         //do the same for history
         self.history = HistoryList()

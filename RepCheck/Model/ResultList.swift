@@ -12,7 +12,7 @@ import UIKit
 class ResultList{
     var results: [Result] = []
     
-    //calculates a score for the user. BETA
+    //calculates a score for the user. 
     func calculateScore(){
         //out of 7
         var sites = 0.0
