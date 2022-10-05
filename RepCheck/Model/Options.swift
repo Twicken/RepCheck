@@ -24,7 +24,7 @@ struct Options {
     func doOption(optionNum: Int){
         //clear history
         if optionNum == 0{
-            Model.sharedInstance.history.historyList.removeAll()
+            Model.sharedInstance.history.deleteAll()
         }
         
     }

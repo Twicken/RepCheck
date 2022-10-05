@@ -9,7 +9,12 @@
 import XCTest
 @testable import RepCheck
 
+// For Unit Testing purposes, main Model() could not be tested due to being Private
+
 class RepCheckTests: XCTestCase {
+    
+    var result: Result = Result(title: "", displayLink: "", snippet:"" )
+    
     
     override func setUp() {
         super.setUp()
@@ -32,5 +37,14 @@ class RepCheckTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+   
+    func testResult()
+    {
+        XCTAssertNotNil(Result.init(title: "", displayLink: "", snippet:""))
+        
+        
+    }
+    
     
 }

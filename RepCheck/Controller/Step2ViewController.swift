@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class Step2ViewController: UIViewController {
+class Step2ViewController: UIViewController, UITextFieldDelegate {
     //Get the model.
     var model = Model.sharedInstance
     
@@ -41,6 +41,23 @@ class Step2ViewController: UIViewController {
         otherBox.text = ""
     }
     
+    // Become first responder to get shake motion
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion and reset values to default
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            townBox.text = ""
+            workBox.text = ""
+            schoolBox.text = ""
+            otherBox.text = ""
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //get the past inputs.
@@ -48,11 +65,26 @@ class Step2ViewController: UIViewController {
         workBox.text = model.searchFields.searchFieldsStep2["work"]
         schoolBox.text = model.searchFields.searchFieldsStep2["school"]
         otherBox.text = model.searchFields.searchFieldsStep2["optional"]
+        //work around to hide the onscreen keyboard once Done selected
+        townBox.delegate=self
+        workBox.delegate=self
+        schoolBox.delegate=self
+        otherBox.delegate=self
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Workaround to allow user to hide the iOS keyboard after input
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        townBox.resignFirstResponder()
+        workBox.resignFirstResponder()
+        schoolBox.resignFirstResponder()
+        otherBox.resignFirstResponder()
+
+        return true
     }
     
     private func saveFields(){

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     //Get the model.
     var model = Model.sharedInstance
@@ -27,11 +27,47 @@ class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         model.searchFields.searchFieldsStep1["middleName"] = middleNameBox.text
         model.searchFields.searchFieldsStep1["surname"] = surnameBox.text
         model.searchFields.searchFieldsStep1["country"] = model.searchFields.countries[country.selectedRow(inComponent: 0)]
-        print(model.searchFields.searchFieldsStep1["country"]!)
     }
 
     @IBAction func resetButtonPressed(_ sender: Any) {
         resetInputs()
+    }
+    
+    // To get shake gesture and hide the keyboard once Done selected
+    // Shake Gesture as approved by instructor Fardin as Cocoa substitute.
+        override func viewDidLoad() {
+        super.viewDidLoad()
+        firstNameBox.delegate=self
+        middleNameBox.delegate=self
+        surnameBox.delegate=self
+        
+        self.becomeFirstResponder()
+            
+    }
+    
+    // Workaround to allow user to hide the iOS keyboard after input
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstNameBox.resignFirstResponder()
+        middleNameBox.resignFirstResponder()
+        surnameBox.resignFirstResponder()
+        
+        return true
+    }
+    
+    
+    // Become first responder to get shake motion
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion and reset values to default
+    // Shake motion approved by instructor Fardin as Cocoa implementation
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            resetInputs()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,10 +77,6 @@ class Step1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         surnameBox.text = model.searchFields.searchFieldsStep1["surname"]
         super.viewDidAppear(true)
 
-    }
-    
-    override func viewDidLoad() {
-        //future functionality
     }
 
     override func didReceiveMemoryWarning() {

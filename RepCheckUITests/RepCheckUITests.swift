@@ -16,7 +16,7 @@ class RepCheckUITests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+        continueAfterFailure = true
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
         
@@ -50,10 +50,10 @@ class RepCheckUITests: XCTestCase {
         // print(app.debugDescription)
         
         // Pre Conditions of the text boxes Scene 1
-        // Expecting no value inititally before input
-        XCTAssertEqual(firstnamebox.value as! String, "")
-        XCTAssertEqual(middlenamebox.value as! String, "")
-        XCTAssertEqual(surnamebox.value as! String, "")
+        // Expecting placeholder value initially before input
+        XCTAssertEqual(firstnamebox.value as! String, "Recommended")
+        XCTAssertEqual(middlenamebox.value as! String, "Optional")
+        XCTAssertEqual(surnamebox.value as! String, "Recommended")
         
         // Action Tests
         // Test that the first text box (first name) is found and accepts user inputs
@@ -93,7 +93,7 @@ class RepCheckUITests: XCTestCase {
         XCTAssertEqual(app.staticTexts.count, 7)
         
         // Test that there are 8 buttons on the screen
-        XCTAssertEqual(app.buttons.count,8)
+        XCTAssertEqual(app.buttons.count,9)
         
         // Test that there are only 1 image on the screen
         XCTAssertEqual(app.images.count,1)
@@ -101,10 +101,10 @@ class RepCheckUITests: XCTestCase {
         // Test the Reset button
         app.buttons["Reset"].tap()
         
-        // Post Reset Button Test - Expecting no values stored in the text boxes
-        XCTAssertEqual(firstnamebox.value as! String, "")
-        XCTAssertEqual(middlenamebox.value as! String, "")
-        XCTAssertEqual(surnamebox.value as! String, "")
+        // Post Reset Button Test - Expecting placeholder values stored in the text boxes
+        XCTAssertEqual(firstnamebox.value as! String, "Recommended")
+        XCTAssertEqual(middlenamebox.value as! String, "Optional")
+        XCTAssertEqual(surnamebox.value as! String, "Recommended")
         
         // Post Reset Button - Expecting No Value in the picker wheel
         XCTAssertEqual(pickerWheel.value as! String, "")
@@ -121,11 +121,11 @@ class RepCheckUITests: XCTestCase {
         let otherbox=app.textFields["otherbox"]
         
         // Pre Conditions of the text boxes Scene 2
-        // Expecting no value inititally before input
-        XCTAssertEqual(townbox.value as! String, "")
-        XCTAssertEqual(workbox.value as! String, "")
-        XCTAssertEqual(schoolbox.value as! String, "")
-        XCTAssertEqual(otherbox.value as! String, "")
+        // Expecting placeholder value inititally before input
+        XCTAssertEqual(townbox.value as! String, "Recommended")
+        XCTAssertEqual(workbox.value as! String, "Optional")
+        XCTAssertEqual(schoolbox.value as! String, "Optional")
+        XCTAssertEqual(otherbox.value as! String, "Optional")
         
         // Action Tests
         // Test that the first text box (Town) is found and accepts user inputs
@@ -215,6 +215,12 @@ class RepCheckUITests: XCTestCase {
         
         // Navigation Test
         app.buttons["See Details"].tap()
+        
+        app.buttons["← Back"].tap()
+        
+        
+        
+        
     }
     
     

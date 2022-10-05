@@ -8,8 +8,10 @@
 
 import Foundation
 
-//holds all out model data once instansiated
+//holds all our model data once instantiated
 class Model{
+    
+    
     static let sharedInstance = Model()
     //holds our options portion of model data
     let options : Options
@@ -18,16 +20,21 @@ class Model{
     //our search history (to be replaced by database)
     var history : HistoryList
     //for storing our search result
-    var result : Result
-    
+    var resultList : ResultList
+    //used for storing which detail has been pressed.
+    var detailNum = 0
+    var currentScore = 0
     //initialise the model
     private init(){
-        ///instansiate the options
+        ///instantiate the options
         self.options = Options()
-        //instansiate the search box storagae.
+        //instantiate the search box storagae.
         self.searchFields = SearchFields()
         //do the same for history
         self.history = HistoryList()
-        self.result = Result()
+        self.resultList = ResultList()
     }
+    
+
+    
 }

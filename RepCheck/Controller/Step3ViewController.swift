@@ -41,6 +41,24 @@ class Step3ViewController: UIViewController{
         youtubeSwitch.isOn = true
     }
     
+    // Become first responder to get shake motion
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion and reset to default
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            facebookSwitch.isOn = true
+            linkedInSwitch.isOn = true
+            twitterSwitch.isOn = true
+            instagramSwitch.isOn = true
+            youtubeSwitch.isOn = true
+        }
+    }
+
     private func saveSwitches(){
         //save switch state
         model.searchFields.switches["facebook"] = facebookSwitch.isOn
@@ -49,6 +67,7 @@ class Step3ViewController: UIViewController{
         model.searchFields.switches["instagram"] = instagramSwitch.isOn
         model.searchFields.switches["youtube"] = youtubeSwitch.isOn
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

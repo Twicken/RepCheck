@@ -16,16 +16,11 @@ class OptionsViewController: UIViewController, UITableViewDataSource, UITableVie
     //Get the model.
     var model = Model.sharedInstance
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     // MARK: - Table view data source
     // The number of segments in the table view.
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -55,12 +50,10 @@ class OptionsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //for detecting clicks
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //do options
-        model.options.doOption(optionNum: indexPath.row)
         //if option 1 was selected, show about box
         if indexPath.row == 1{
             //new alert for showing about
-            let alertController = UIAlertController(title: "RepCheck version 0.1 Alpha", message: "By Joel Wall & Joseph Galati", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "RepCheck version 1.1 Alpha", message: "By Joel Wall & Joseph Galati", preferredStyle: .alert)
     
             let  OKButton = UIAlertAction(title: "OK", style: .destructive, handler: { (action) -> Void in
             })
@@ -69,56 +62,23 @@ class OptionsViewController: UIViewController, UITableViewDataSource, UITableVie
             
             self.present(alertController, animated: true, completion: nil)
         }
+        //if clear history selected.
+        if indexPath.row == 0{
+            //new alert for showing about
+            let alertController = UIAlertController(title: "Delete all search history", message: "Are you sure you want to delete all previous search history? This cannot be undone.", preferredStyle: .alert)
+            
+            let  OKButton = UIAlertAction(title: "Yes", style: .destructive, handler: { (action) -> Void in
+                self.model.options.doOption(optionNum: indexPath.row)
+            })
+            let  NoButton = UIAlertAction(title: "No", style: .destructive, handler: { (action) -> Void in
+              
+            })
+            
+            alertController.addAction(OKButton)
+            alertController.addAction(NoButton)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
-    
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
-    
-    
 
 
 }

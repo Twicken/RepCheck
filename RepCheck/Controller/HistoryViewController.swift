@@ -1,5 +1,5 @@
 //
-//  MasterViewController.swift
+//  HistoryViewController.swift
 //  RepCheck
 //
 //  Created by Joel Wall on 5/7/18.
@@ -7,29 +7,24 @@
 //
 
 import UIKit
+import CoreData
 
-
-class MasterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    @IBOutlet weak var backButton: UIButton!
     //This outlet connects the controller to the view so we can modify it. changes mase to this variable change the view!
     @IBOutlet weak var tableView: UITableView!
     //Get the model.
     var model = Model.sharedInstance
     
-    //If button is back button is pressed, go back to previous view controller
-    //This has to be done programatically, as we have a custom back button.
-    @IBAction func triggered(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     override func viewDidLoad() {
+        model.history.fetchFromDB()
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        model.history.fetchFromDB()
         tableView.reloadData()
         super.viewDidAppear(true)
         
@@ -39,6 +34,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     // MARK: - Table view data source
     // The number of segments in the table view.
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,26 +44,26 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Return the number of cells in the tableview
-        return model.result.resultList.count
+        return model.history.historyList.count
     }
     
-    
+    //populates the table view with our history
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "URLCell", for: indexPath)
-        
-        // Access the default properties of the prototype cell
-        // Must set you prototype cell be display the subtitle
-        // in storyboard
-        cell.textLabel?.text = model.result.resultList[indexPath.item]
-        cell.detailTextLabel?.text = "Result"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath)
+        cell.textLabel?.text = model.history.historyList[indexPath.item].searchFieldsStep1["firstName"]! + " " +  model.history.historyList[indexPath.item].searchFieldsStep1["surname"]!
+        cell.detailTextLabel?.text = "History"
         
         return cell
     }
     
-    //for detecting clicks
+    //for detecting clicks and loading up history for a re-search/modification
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //choose what details will be shown.
+        model.searchFields = model.history.historyList[indexPath.row]
+        
+        
+        //lets the history class know what entry to overwrite
+        model.history.currentlyModifyingSearch = indexPath.row
     }
     
-
+    
 }

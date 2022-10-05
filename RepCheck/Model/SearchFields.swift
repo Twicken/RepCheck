@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 //options and option functionality for the options view!
 struct SearchFields{
@@ -16,6 +17,8 @@ struct SearchFields{
     var searchFieldsStep1 = ["firstName": "", "middleName": "", "surname": "", "country": ""]
     var searchFieldsStep2 = ["town": "", "work": "", "school": "", "optional": ""]
     var switches = ["facebook": true, "linkedIn": true, "twitter": true, "instagram": true, "youtube": true]
+    //for finding our copy in coredata
+    var objectID = NSManagedObjectID()
     
     //get list of countries
     var countries: [String] = {
